@@ -12,6 +12,10 @@ Durante más de 25 años, Polygon Bikes ha estado diseñando, construyendo e ing
 Propain Bikes:
 Exitoso gracias a la ingeniería de calidad alemana. El deseo de una tecnología de bicicletas sólida y funcional, una gran pasión por andar en bicicleta y demasiadas cervezas: los ingredientes que inspiraron a Robert Krauss y Markus Zander en sus vacaciones en bicicleta de montaña en Whistler en 2006 para fundar la marca Propain Bicycles. Propain es sinónimo de bicicletas dedicadas a la gravedad y centradas en el máximo placer! Más conducción, menos desgarro. Una filosofía que condujo al éxito de Propain. Para 2018, hay diez modelos diferentes, que van desde el Rage downhill rig hasta el hardtail para niños Dreckspatz. ¿Cómo es eso posible? Se logró con un equipo de entusiastas de la bicicleta dedicados que viven montando, son parte de la comunidad ciclista y a través de innumerables recorridos por senderos saben lo que funciona. El equipo de ingeniería garantiza que Propain tiene el control de todo el proceso de desarrollo, desde la primera idea hasta los planos finales de producción.
 
+¿Para quien son nuestras bicis?
+
+Nuesta amplia varidad de modelos nos permite abarcar a casi todos los estilos de riders. Desde el que va en bicicleta al trabajo, el que entrena o el que simplemente le encanta andar en bicicleta y disfrutar del aire libre.
+
 ¿Quienes formamos Bicis 7G?
 
 Aqui les presentamos a este team el cual le da forma y color haciendo rodar este gran negocio:
