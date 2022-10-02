@@ -21,6 +21,7 @@ Nuesta amplia varidad de modelos nos permite abarcar a casi todos los estilos de
 Aqui les presentamos a este team el cual le da forma y color haciendo rodar este gran negocio:
 
 -Dolores Stover:
+¡Hola a todos! Mi nombre es Dolores, pero me dicen Loli. Tengo 29 años, estoy casada y vivo en Buenos Aires. En mi tiempo libre me encanta hacer yoga, salir a caminar con mi perra Alba y tambien juntarme con mis amigas de siempre. Me recibi de Fonoaudiologa y estoy estudiando la Licenciatura en sistemas. Me encanta seguir aprendiendo cosas nuevas, por eso me anime a conocer mas sobre el mundo de la programacion. Estoy muy feliz de formar parte de este proyecto. Nos vemos!!
 
 -Matias Rinaldi:
 
