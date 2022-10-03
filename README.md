@@ -27,6 +27,7 @@ Aqui les presentamos a este team el cual le da forma y color haciendo rodar este
     ¡Hola!
 
 -Catalina Gómez:
+¡Hola! Mi nombre es Catalina Gómez y mi familia y amigos me dicen Cata. Vivo en Medellín, Colombia; amo esta ciudad por la gente, el clima y la versatilidad. Disfruto mucho practicar deportes como la natación, el atletismo, el buceo y, por supuesto, montar bici. Soy profesora de inglés y una de mis grandes pasiones es disfrutar de procesos de aprendizaje con niños; yo misma sigo desarrollando el placer por aprender cosas nuevas. Me siento muy feliz de poder explorar conocimientos con este gran equipo. ¡Saludos!
 
 -Agustín Schuller: 
     ¡Hola! Soy Agustín, Agus para los amigos. Tengo 40, estudié ingeniería civil, casado, con dos hermosas niñas y actualmente viviendo en Chile. Gran aficionado de los deportes extremos como kitesurf, esquí y por supuesto las bicis. Luego de varios años trabajando y liderando grupos de personas afines a la construcción, decidí empezar este nuevo camino de la programación y el diseño de sitios web. Muy entusiasmado con este proyecto y con el gran equipo de trabajo que se armó. NOS VEMOS EN EL CERRO!
