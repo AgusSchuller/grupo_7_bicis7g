@@ -31,6 +31,15 @@ Aqui les presentamos a este team el cual le da forma y color haciendo rodar este
 -Agustín Schuller: 
     ¡Hola! Soy Agustín, Agus para los amigos. Tengo 40, estudié ingeniería civil, casado, con dos hermosas niñas y actualmente viviendo en Chile. Gran aficionado de los deportes extremos como kitesurf, esquí y por supuesto las bicis. Luego de varios años trabajando y liderando grupos de personas afines a la construcción, decidí empezar este nuevo camino de la programación y el diseño de sitios web. Muy entusiasmado con este proyecto y con el gran equipo de trabajo que se armó. NOS VEMOS EN EL CERRO!
 
+¿Cual es nuestra inspiración?
+Aqui te dejamos los links de los cuales nos vamos a basar para armar nuestro propio e-commerce de venta de bicicletas.
+
+1) Cross Mountain: https://crossmountain.cl/
+2) Ride Shop: https://rideshop.cl/
+3) Tienda Ride: https://tiendaride.cl/
+4) Trail Store: https://trailstore.cl/
+5) Importadora ISL: https://importadora-isl.cl/categoria-producto/propain/
+6) Polygon Bikes: https://www.polygonbikes.com/
 
 
 ¡Gracias por compartir con nosotros esta aventura!
