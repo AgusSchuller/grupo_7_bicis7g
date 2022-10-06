@@ -1,3 +1,30 @@
 body{
     background-color: skyblue;
 }
+
+h1{
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 80px;
+    line-height: 30px;
+   }
+
+.texto-header{
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 70px;
+    font-family: verdana;
+    line-height: 20px;
+   }
+
+   .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: auto;
+    width: 100;
+  }
