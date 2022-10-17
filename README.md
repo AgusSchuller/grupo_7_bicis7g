@@ -42,5 +42,7 @@ Aqui te dejamos los links de los cuales nos vamos a basar para armar nuestro pro
 5) Importadora ISL: https://importadora-isl.cl/categoria-producto/propain/
 6) Polygon Bikes: https://www.polygonbikes.com/
 
+Tablero de trabajo:
+https://trello.com/b/TNCM1ZWR/proyecto-integrador-grupo-7
 
 ¡Gracias por compartir con nosotros esta aventura!
