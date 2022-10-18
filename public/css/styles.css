@@ -3,17 +3,14 @@
   margin: 0;
   padding: 0;
 }
-
 body {
   background-color: white;
   font-family: "Roboto";
 }
-
 .logo {
   width: 110px;
   border-radius: 15px;
 }
-
 .copy-header {
   font-weight: 100;
   max-width: 350px;
@@ -50,7 +47,6 @@ body {
   background-color: white;
   padding: 20px;
 }
-
 .bienvenida {
   position: relative;
 }
@@ -65,7 +61,6 @@ body {
   left: 50%;
   transform: translate(-50%, 50%);
 }
-
 h1 {
   text-align: center;
   font-weight: bold;
@@ -91,7 +86,6 @@ h1 {
 .lista-destacada li {
   list-style: none;
 }
-
 .footer-container {
   display: flex;
   background-color: black;
@@ -102,7 +96,6 @@ h1 {
 .footer-content {
   padding-left: 30px;
 }
-
 .footer-list,
 .footer-links {
   display: flex;
@@ -115,7 +108,6 @@ h1 {
   color: white;
   text-decoration: none;
 }
-
 .footer-social {
   display: flex;
   column-gap: 10px;
