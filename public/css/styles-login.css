@@ -54,3 +54,31 @@ header h1{
 .form-salut{
     font-weight: bold;    
 }
+.img-log{
+    width: 95%;
+    border: 15px solid rgba(211, 211, 211, 0.75);
+    border-radius: 10px;
+    
+}
+.box01{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    padding: 10px;
+}
+
+@media (min-width: 576px){
+  
+}
+
+@media (min-width: 768px){
+  
+}
+
+@media (min-width: 992px){
+  
+}
+
+@media (min-width: 1200px){
+  
+}
