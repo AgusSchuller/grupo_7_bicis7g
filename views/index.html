@@ -20,6 +20,12 @@
     <header class="main-header">
       <div class="main-header-top-bar">
         <img src="/img/logo7g2.jpg" class="logo" />
+
+        <form class="searchicon">
+          <input type="search" name="q" placeholder="buscar productos, marcas"></imput>
+          <input type="submit" value="Buscar" class="buscador">
+          </form>
+
         <h2 class="copy-header">
           <i class="fa-solid fa-user"></i>
           <a href='/login'>Ingresa</a>
@@ -48,38 +54,51 @@
     <main>
       <section class="bienvenida">
         <h1>BIENVENIDOS A BICIS 7G</h1>
-        <img src="/img/img-header-2.jpg" class="center" />
+        <img src="/img/img-header-2.jpg"/>
       </section>
-      <section class="oferta-de-productos">
-        <article>
-          <header>
-            <h2 class="titulo-destacado">PRODUCTOS DESTACADOS</h2>
-          </header>
-
-          <ul class="lista-destacada">
-            <li>
-              <img src="/img/mtb-poly-t7-1.jpg" alt="info de imagen" />
-              <p>POLYGON SISKU T7</p>
-              <p>U$D 2.100,00</p>
-            </li>
-            <li>
-              <img src="/img/mtb-poly-t8-1.jpg" alt="info de imagen" />
-              <p>POLYGON SISKU T8</p>
-              <p>U$D 2.400,00</p>
-            </li>
-            <li>
-              <img src="/img/mtb-prop-tyee-2a.jpg" alt="info de imagen" />
-              <p>PROPAIN TYEE</p>
-              <p>U$D 3.000,00</p>
-            </li>
-            <li>
-              <img src="/img/mtb-prop-spindrift-2a.jpg" alt="info de imagen" />
-              <p>PROPAIL SPINDRIFT</p>
-              <p>U$D 2.700,00</p>
-            </li>
-          </ul>
-        </article>
+     <!--====================PRODUCTOS DESTACADOS ====================-->
+      <section class="busqueda">
+          <h2>Productos destacados</h2>
+        <article class="vamosabuscar"> 
+        <div class="producto">
+          <img src="/img/mtb-poly-t7-1.jpg" />
+          <div class="detalle-producto">
+            <i  class="fas fa-truck"></i  >
+            <h4 class="precio">U$D 2.100,00</h4>
+            <h4 class="descuentos">20% OFF</h4>
+            <h3>POLYGON SISKU T7</h3>
+          </div>
+        </div>
+        <div class="producto">
+          <img src="/img/mtb-prop-tyee-1.jpg" />
+          <div class="detalle-producto">
+            <i class="fas fa-truck"></i>
+            <h4 class="precio">U$D 2.400,00</h4>
+            <h4 class="descuentos">20% OFF</h4>
+            <h3>PROPAIN TYEE</h3>
+          </div>
+        </div>
+        <div class="producto">
+          <img src="/img/mtb-prop-spindrift-2a.jpg" />
+          <div class="detalle-producto">
+            <i class="fas fa-truck"></i>
+            <h4 class="precio">U$D 3.000,00</h4>
+            <h4 class="descuentos">10% OFF</h4>
+            <h3>PROPAIL SPINDRIFT</h3>
+          </div>
+        </div>
+        <div class="producto">
+          <img src="/img/mtb-poly-t8-1.jpg" />
+          <div class="detalle-producto">
+            <i class="fas fa-truck"></i>
+            <h4 class="precio">U$D 2.400,00</h4>
+            <h4 class="descuentos">10% OFF</h4>
+            <h3>POLYGON SISKU T8</h3>
+          </div>
+        </div>
+      </article> 
       </section>
+      <div class="separacion"></div>
     </main>
     <!--==================== FOOTER ====================-->
     <footer class="footer-section">
