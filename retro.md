@@ -1,6 +1,10 @@
 Retrospectiva de sprint anterior:
 
-Hicimos bien - 
-Hicimos mal - 
-Empezar a hacer - 
-Dejar de hacer - 
+Hicimos bien: 
+Pusimos reglas claras en el equipo para evitar conflictos en github. 
+Buena comunicacion. 
+Establecimos dia y horario para trabajar en equipo en el proyecto.
+Hicimos mal:
+Empezar a hacer: 
+Conectarse en discord cuando alguien esta trabajando en el proyecto. Utilizar trello para organizar las tareas.
+Dejar de hacer:  

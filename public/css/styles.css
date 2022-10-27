@@ -13,23 +13,24 @@ main section h1 {
   font-family: "Roboto", sans-serif;
 }
 /*-----------HEADER----------*/
-.main-header-top-bar{
+.main-header-top-bar {
   display: flex;
   justify-content: space-around;
-}.logo {
+}
+.logo {
   width: 110px;
   border-radius: 15px;
 }
 .copy-header {
   font-weight: 100;
   max-width: 350px;
-  
+
   text-align: right;
   padding: 20px;
 }
 .copy-header a {
   color: black;
-  text-decoration: none; 
+  text-decoration: none;
 }
 .main-navbar {
   display: none;
@@ -74,7 +75,7 @@ main section h1 {
 }
 .bienvenida h1 {
   font-size: 3rem;
-  font-family: "Roboto",sans-serif;
+  font-family: "Roboto", sans-serif;
   position: absolute;
   font-weight: bold;
   color: white;
@@ -82,13 +83,12 @@ main section h1 {
   left: 50%;
   transform: translate(-50%, 50%);
 }
-.busqueda h2{
+.busqueda h2 {
   text-align: left;
   font-weight: bold;
-  font-family: "Roboto",sans-serif;    
-  margin-left: 110px;      
-  margin-top: 20px;                                 
-
+  font-family: "Roboto", sans-serif;
+  margin-left: 110px;
+  margin-top: 20px;
 }
 /*-----------PRODUCTOS----------*/
 main {
@@ -143,10 +143,10 @@ main section h3 {
   color: #39b54a;
 }
 .producto img {
-  width:95%;
+  width: 95%;
   margin: 10px;
 }
-.producto{
+.producto {
   width: 310px;
   display: flex;
   margin: 20px;
@@ -165,7 +165,7 @@ main section .producto:hover h3 {
 main section .producto:hover {
   box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
-.separacion{
+.separacion {
   margin-bottom: 50px;
 }
 /*-----------FOOTER----------*/
@@ -223,9 +223,13 @@ main section .producto:hover {
     justify-content: center;
     flex-wrap: wrap;
   }
-  .producto img{
+  .producto img {
     flex-basis: 45%;
     margin: 10px;
+  }
+  .footer-link,
+  .footer-social {
+    display: none;
   }
 }
 @media (min-width: 768px) {
@@ -240,7 +244,7 @@ main section .producto:hover {
   .searchicon {
     display: inline-block;
   }
-  .hamburguer-button{
+  .hamburguer-button {
     display: none;
   }
   .main-navbar {
@@ -263,6 +267,10 @@ main section .producto:hover {
     flex-basis: 22%;
     margin: 10px;
   }
+  .footer-link,
+  .footer-social {
+    display: none;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -273,7 +281,7 @@ main section .producto:hover {
   .main-navbar {
     max-width: 1200px;
     margin: auto;
-    padding: 0px; 
+    padding: 0px;
   }
   .main-header-top-bar {
     align-items: center;
