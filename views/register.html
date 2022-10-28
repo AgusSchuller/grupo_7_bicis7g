@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bicis 7G</title>
     <link rel="stylesheet" href="/css/normalize.css" />
-    <link rel="stylesheet" href="/css/styles-login.css" />
+    <link rel="stylesheet" href="/css/styles-register.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap"
       rel="stylesheet"
@@ -26,10 +26,43 @@
       </a>
       </nav>
     </header>
-
-<h1> HACER REGISTRO</h1>
-
-
+    <main>
+      <section id="registro">
+        <h2>Resgístrate:</h2>
+        <form action="/" method="post">
+          <div class="field">
+            <label for="nombreApellido">Nombre y apellido:</label>
+            <input type="text" required minlength="2" placeholder="Nombre Apellido" name="nombreApellido" id="nombreApellido">
+          </div>
+          <div class="field">
+            <label for="usuario">Nombre de usuario:</label>
+            <input type="text" required minlength="2" placeholder="Nombre de usuario" name="usuario" id="usuario">
+          </div>
+          <div class="field">
+            <label for="fechaNacimiento">Fecha de nacimiento:</label>
+            <input type="date" required placeholder="Fecha de nacimiento" name="fechaNacimiento" id="fechaNacimiento">
+          </div>
+          <div class="field">
+            <label for="domicilio">Domicilio:</label>
+            <input type="text" required minlength="2" placeholder="Domicilio" name="domicilio" id="domicilio">
+          </div>
+          <div class="field">
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" required minlength="4" placeholder="Contraseña" name="contrasena" id="contrasena">
+            <span class="error-message">Este campo es requerido. Ingrese al menos cuatro carácteres.</span>
+          </div>
+          <div class="field">
+            <label for="confirmaContrasena">Confirmar contraseña:</label>
+            <input type="password" required minlength="4" placeholder="Confirmar contraseña" name="confirmaContrasena" id="confirmaContrasena">
+            <span class="error-message">Este campo es requerido. Ingrese al menos cuatro carácteres.</span>
+          </div>
+          <nav>
+            <input type="submit" id="submit-register">
+            <input type="reset" id="reset-register">
+          </nav>
+        </form>
+      </section>
+    </main>
 <!--FOOTER -->
 <footer class="footer-section">
   <div class="footer-container">
