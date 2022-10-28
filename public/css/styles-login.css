@@ -19,13 +19,6 @@
     text-align: right;
     padding: 20px;
   }
-  .copy-header a {
-    color: black;
-    text-decoration: none;
-  }
-  .searchicon {
-    display: none;
-  }
   .hamburguer-button {
     background-color: black;
     color: white;
@@ -57,12 +50,12 @@
     border-radius: 5px;
     text-align: center;
     margin: 5px;   
+    margin-bottom: 10px;
 }
 .form-div{
     margin: 5px;
     text-align: center;
     width: 100%;
-    
 }
 .form-salut{
     font-weight: bold;    
@@ -71,7 +64,6 @@
     width: 95%;
     border: 15px solid rgba(211, 211, 211, 0.75);
     border-radius: 10px;
-    
 }
 .box01{
     display: flex;
@@ -161,10 +153,6 @@
       display: flex;
       justify-content: space-between;
     }
-    .copy-header {
-      max-width: 350px;
-      text-align: right;
-    }
     .form-a{
         padding:10px;
         font-family: 'Roboto', sans-serif;
@@ -192,13 +180,6 @@
     .main-header-top-bar {
       display: flex;
       justify-content: space-between;
-    }
-    .copy-header {
-      max-width: 350px;
-      text-align: right;
-    }
-    .searchicon {
-      display: inline-block;
     }
     .hamburguer-button {
       display: none;
@@ -230,13 +211,7 @@
     }
     .main-header-top-bar {
       align-items: center;
-    }
-    .copy-header {
-      max-width: none;
-      font-size: 20px;
-      font-weight: 400;
-      margin: 0;
-    }
+    }   
     .footer-container {
       display: flex;
       flex-direction: row;

@@ -73,16 +73,7 @@ main section h1 {
   width: 100%;
   height: 100%;
 }
-.bienvenida h1 {
-  font-size: 3rem;
-  font-family: "Roboto", sans-serif;
-  position: absolute;
-  font-weight: bold;
-  color: white;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 50%);
-}
+
 .busqueda h2 {
   text-align: left;
   font-weight: bold;
