@@ -49,6 +49,80 @@ main section h1 {
   background-color: white;
   padding: 20px;
 }
+/*-----------DETAIL----------*/
+
+.detail-section{
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+}
+
+.detail-container-image{
+}
+
+.detail-container-description{
+}
+
+.detail-container-product{
+  color: black;
+  margin: 20px;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.detail-container-price{
+  color: grey;
+margin: 20px;
+font-size: 20px;
+font-weight: 400;
+}
+
+.detail-container-price-discount{
+  color: green;
+  font-weight: bold;
+}
+
+.detail-container-specification{
+  margin: 20px;
+}
+
+.detail-container-specification-pargraph{
+  text-align: justify;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.detail-container-options{
+  margin: 20px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.detail-container-options-color{
+  margin: 20px;
+}
+
+.detail-container-options-size{
+  margin: 20px;
+}
+
+.detail-container-buy{
+  margin: 20px; 
+}
+
+.detail-container-buy-quantity{
+  margin: 20px;
+}
+
+.detail-container-buy-add{
+  background-color: black;
+  color: white;
+  border-radius: 15px;
+  font-size: 20px;
+  padding: 19px;
+  font-weight: bold;
+}
 
 /*-----------FOOTER----------*/
 .footer-container {
