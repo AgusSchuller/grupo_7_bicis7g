@@ -11,7 +11,7 @@ app.use("/", rutasMain);
 
 //app.set("views", path.join(__dirname, "/src/views"));
 
-//app.set("view engine", "ejs");
+app.set("view engine", "ejs");
 
 
 
