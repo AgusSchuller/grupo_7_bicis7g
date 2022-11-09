@@ -2,9 +2,21 @@ const path = require("path");
 
 const mainController = {
     index: (req, res)=>{
-       // res.render("index")
-    //res.sendFile(path.resolve("./src/views/index.html"));
-}};
+       res.render("index")
+    },
+    login: (req, res)=>{
+        res.render("login")
+    },
+    register: (req, res)=>{
+        res.render("register")
+    },
+    productCart: (req, res)=>{
+        res.render("productCart")
+    },
+    productDetail: (req, res)=>{
+        res.render("productDetail")
+    },
+    };
 
 module.exports = mainController;
 
