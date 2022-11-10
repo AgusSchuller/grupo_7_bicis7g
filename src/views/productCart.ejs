@@ -1,27 +1,7 @@
-<%- include("template/head", {tituloWeb: "Carrito de Compras"})%>
-  <body>
-    <!--HEADER -->
-    <header class="main-header">
-      <div class="main-header-top-bar">
-        <img src="/img/logo7g2.jpg" class="logo" />
-
-        <form class="searchicon">
-          <input type="search" name="q" placeholder="buscar productos, marcas"></imput>
-          <input type="submit" value="Buscar" class="buscador">
-          </form>
-
-        <h2 class="copy-header">
-            <a href="/productcart"> 
-            <i class="fa-sharp fa-solid fa-basket-shopping">
-            </i> Mis compras</a>
-        </h2>
-      </div>
-      <a href="#" class="hamburguer-button">
-        <i class="fa-solid fa-bars"></i>
-      </a>
-
-      </nav>
-    </header>
+<%- include("template/head", {tituloWeb: "Carrito de Compras", cssstyle: "/css/styles-prodCart.css"})%>
+<body>
+<!--HEADER -->
+<%- include("template/header-car-det") %> 
 <!--CONTENIDO PRINCIPAL -->
     <main>
         
@@ -52,61 +32,4 @@
 
     </main>
 <!--FOOTER -->
-<footer class="footer-section">
-  <div class="footer-container">
-    <div class="footer-content">
-      <h3 class="footer-title">Informacion</h3>
-
-      <ul class="footer-list">
-        <li>Calle falsa 123</li>
-        <li>Springfield</li>
-        <li>1234-5678</li>
-      </ul>
-    </div>
-    <div class="footer-content">
-      <h3 class="footer-title">Sobre Nosotros</h3>
-      <ul class="footer-links">
-        <li>
-          <a href="#" class="footer-link">Soporte</a>
-        </li>
-        <li>
-          <a href="#" class="footer-link">Soporte de cliente</a>
-        </li>
-        <li>
-          <a href="#" class="footer-link">Sobre nosotros</a>
-        </li>
-      </ul>
-    </div>
-    <div class="footer-content">
-      <h3 class="footer-title">Productos</h3>
-
-      <ul class="footer-links">
-        <li>
-          <a href="#" class="footer-link">Bicicletas</a>
-        </li>
-        <li>
-          <a href="#" class="footer-link">Mountain bikes</a>
-        </li>
-        <li>
-          <a href="#" class="footer-link">Electricas</a>
-        </li>
-      </ul>
-    </div>
-    <div class="footer-content">
-      <h3 class="footer-title">Social</h3>
-      <ul class="footer-social">
-        <a href="https://www.facebook.com/" class="footer-social-link">
-          <i class="fa-brands fa-facebook"></i>
-        </a>
-        <a href="https://twitter.com/" class="footer-social-link">
-          <i class="fa-brands fa-twitter"></i>
-        </a>
-        <a href="https://www.instagram.com/" class="footer-social-link">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-      </ul>
-    </div>
-  </div>
-</footer>
-</body>
-</html>
+<%- include("template/footer") %>

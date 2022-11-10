@@ -1,32 +1,10 @@
-<%- include("template/head", {tituloWeb: "Detalle de Producto"})%>
-  <body>
-    <!--HEADER -->
-    <header class="main-header">
-      <div class="main-header-top-bar">
-        <img src="/img/logo7g2.jpg" class="logo" />
-
-        <form class="searchicon">
-          <input type="search" name="q" placeholder="buscar productos, marcas"></imput>
-          <input type="submit" value="Buscar" class="buscador">
-          </form>
-
-        <h2 class="copy-header">
-            <a href="/productcart"> 
-            <i class="fa-sharp fa-solid fa-basket-shopping">
-            </i> Mis compras</a>
-        </h2>
-      </div>
-      <a href="#" class="hamburguer-button">
-        <i class="fa-solid fa-bars"></i>
-      </a>
-
-      </nav>
-    </header>
+<%- include("template/head", {tituloWeb: "Detalle de Producto", cssstyle: "/css/styles-prodDetail.css"})%>
+<body>
+<!--HEADER -->
+<%- include("template/header-car-det") %>
 <!--CONTENIDO PRINCIPAL -->
-    <main>
         
 <!--DETALLE DEL PRODUCTO-->
-
 <section class="detail-section">
 <div class="detail-container-image">
   <img src="/img/mtb-poly-t7-1.jpg"/>
@@ -45,15 +23,15 @@
     <div class="detail-container-options">
       <select class="detail-container-options-color" name="color" id="color">
         <option value="selectColor">Seleccionar Color</option>
-        <option value="color1">green&blue</option>
-        <option value="color2">purple&yellow</option>
-        <option value="color3">red&green</option>
+        <option value="color1">Green & Blue</option>
+        <option value="color2">Purple & Yellow</option>
+        <option value="color3">Red & Green</option>
       </select>
       <select class="detail-container-options-size" name="size" id="size">
         <option value="selectSize">Seleccionar Talla</option>
-        <option value="size1">s</option>
-        <option value="size2">m</option>
-        <option value="size3">l</option>
+        <option value="size1">S</option>
+        <option value="size2">M</option>
+        <option value="size3">L</option>
       </select>
     </div>
     <div class="detail-container-buy">
@@ -68,61 +46,4 @@
 
 </main>
 <!--FOOTER -->
-<footer class="footer-section">
-  <div class="footer-container">
-    <div class="footer-content">
-      <h3 class="footer-title">Informacion</h3>
-
-      <ul class="footer-list">
-        <li>Calle falsa 123</li>
-        <li>Springfield</li>
-        <li>1234-5678</li>
-      </ul>
-    </div>
-    <div class="footer-content">
-      <h3 class="footer-title">Sobre Nosotros</h3>
-      <ul class="footer-links">
-        <li>
-          <a href="#" class="footer-link">Soporte</a>
-        </li>
-        <li>
-          <a href="#" class="footer-link">Soporte de cliente</a>
-        </li>
-        <li>
-          <a href="#" class="footer-link">Sobre nosotros</a>
-        </li>
-      </ul>
-    </div>
-    <div class="footer-content">
-      <h3 class="footer-title">Productos</h3>
-
-      <ul class="footer-links">
-        <li>
-          <a href="#" class="footer-link">Bicicletas</a>
-        </li>
-        <li>
-          <a href="#" class="footer-link">Mountain bikes</a>
-        </li>
-        <li>
-          <a href="#" class="footer-link">Electricas</a>
-        </li>
-      </ul>
-    </div>
-    <div class="footer-content">
-      <h3 class="footer-title">Social</h3>
-      <ul class="footer-social">
-        <a href="https://www.facebook.com/" class="footer-social-link">
-          <i class="fa-brands fa-facebook"></i>
-        </a>
-        <a href="https://twitter.com/" class="footer-social-link">
-          <i class="fa-brands fa-twitter"></i>
-        </a>
-        <a href="https://www.instagram.com/" class="footer-social-link">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-      </ul>
-    </div>
-  </div>
-</footer>
-</body>
-</html>
+<%- include("template/footer") %>
