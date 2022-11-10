@@ -11,8 +11,12 @@ app.set("view engine", "ejs");
 
 app.set("views", path.join(__dirname, "/src/views"));
 
-app.use("/", rutasMain);
-
 app.listen(3000, ()=>{
     console.log("Servidor funcionando");
 });
+
+app.use("/", rutasMain);
+
+app.use((req, res, next)=>{
+    res.status(404).render(__dirname + "404")
+})
