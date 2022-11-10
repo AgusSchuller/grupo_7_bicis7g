@@ -18,5 +18,5 @@ app.listen(3000, ()=>{
 app.use("/", rutasMain);
 
 app.use((req, res, next)=>{
-    res.status(404).render(__dirname + "404")
+    res.status(404).render("404")
 })
