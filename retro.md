@@ -1,15 +1,15 @@
-Retrospectiva de sprint anterior:
+Retrospectiva de sprint 2:
 
-Hicimos bien: 
-Pusimos reglas claras en el equipo para evitar conflictos en github. 
-Buena comunicacion. 
-Establecimos dia y horario para trabajar en equipo en el proyecto.
+-Hicimos bien: 
+.Seguimos las reglas del equipo para manejar github.
+.Conectarnos a discord cuando estamos trabajando en el proyecto.
+.Utilizar Trello para organizar las tareas.
 
-Hicimos mal: 
-Trabajamos en equipo, pero solo 2 integrantes hacian commits.
+-Hicimos mal: 
+.Ponernos al día con la teoria tarde.
 
-Empezar a hacer: 
-Conectarse en discord cuando alguien esta trabajando en el proyecto. Utilizar trello para organizar las tareas.
+-Empezar a hacer: 
+.Estar al día con la teoria. Poner 1 día mas a la semana para daily.
 
-Dejar de hacer:  
-Que solo pushiemos a la rama master.
+-Dejar de hacer:  
+.Hacer mas push colaborativo entre todos.
