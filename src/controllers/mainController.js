@@ -5,17 +5,23 @@ const mainController = {
        res.render("index")
     },
     login: (req, res)=>{
-        res.render("login")
+        res.render("./users/login")
     },
     register: (req, res)=>{
-        res.render("register")
+        res.render("./users/register")
     },
     productCart: (req, res)=>{
-        res.render("productCart")
+        res.render("./products/productCart")
     },
     productDetail: (req, res)=>{
-        res.render("productDetail")
+        res.render("./products/productDetail")
     },
+    newProd: (req, res)=>{
+        res.render("./products/newProd")
+    },
+    editProd: (req, res)=>{
+        res.render("./products/editProd")
+    }
     };
 
 module.exports = mainController;

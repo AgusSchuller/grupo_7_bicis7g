@@ -1,0 +1,52 @@
+<%- include("../template/head", {tituloWeb: "Editar Producto", cssstyle: "/css/formularios.css"})%>
+<body>
+<!--HEADER -->
+<%- include("../template/header-car-det") %> 
+<!--CONTENIDO PRINCIPAL -->
+<main>
+    <section id="registro">
+      <h2>Editar Producto</h2>
+      <form action="/" method="post">
+        <div class="field">
+          <label for="nameProduct">Nombre del Producto:</label>
+          <br>
+          <input type="text" required minlength="2" placeholder="Nombre del Producto" name="nameProduct" id="nameProduct">
+        </div>
+        <div class="field">
+          <label for="usuario">Descripción</label>
+          <br>
+          <input type="text" required minlength="2" placeholder="Descripción" name="description" id="description">
+        </div>
+        <div class="field">
+          <label for="fechaNacimiento">Precio</label>
+          <br>
+          <input type="number" required placeholder="Precio" name="price" id="price">
+        </div>
+        <div class="field">
+          <label for="domicilio">Descuento</label>
+          <br>
+          <input type="number" required minlength="2" placeholder="Descuento" name="descuento" id="descuento">
+        </div>
+        <div class="field">
+          <label for="contrasena">Talla</label>
+          <select class="detail-container-options-size" name="size" id="size">
+            <option value="selectSize">Seleccionar Talla</option>
+            <option value="size1">S</option>
+            <option value="size2">M</option>
+            <option value="size3">L</option>
+          </select>
+        </div>
+        <div class="field">
+            <label for="usuario">Color</label>
+            <br>
+            <input type="text" required minlength="2" placeholder="Color" name="color" id="color">
+          </div>
+        <nav>
+          <input type="submit" id="submit-editProd">
+          <input type="reset" id="reset-editprod">
+        </nav>
+      </form>
+    </section>
+</main>
+<!--FOOTER -->
+<%- include("../template/footer") %>
