@@ -3,10 +3,10 @@
 <!--HEADER -->
 <%- include("../partials/header-log-reg") %>
 <!--FORMULARIO REGISTRO-->
-    <main>
-      <section id="registro">
-        <h2>Resgístrate:</h2>
-        <form action="/" method="post">
+    
+        
+        <form class="register-form" action="/" method="post">
+          <h2 class="form-title">Resgístrate:</h2>
           <div class="field">
             <label for="nombreApellido">Nombre y apellido:</label>
             <input type="text" required minlength="2" placeholder="Nombre Apellido" name="nombreApellido" id="nombreApellido">
@@ -38,7 +38,5 @@
             <input type="reset" id="reset-register">
           </nav>
         </form>
-      </section>
-    </main>
 <!--FOOTER -->
 <%- include("../partials/footer") %>

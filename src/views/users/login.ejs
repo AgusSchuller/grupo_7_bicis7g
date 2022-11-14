@@ -3,29 +3,28 @@
 <!--HEADER -->
 <%- include("../partials/header") %>
 <!--FORMULARIO INGRESO-->
-    <form action="/perfil-usuario" method="get" class="form-a">
-      <div>
-        <label class="form-salut">¡Hola!</label>
+<section class="login-section">
+    <form class="form-login" action="/perfil-usuario" method="get" class="form-a">
+      <h2 class="form-title">Inicia Sesión</h2>
+      <p class="form-paragraph">¿Aún no tienes una cuenta?<a href="/register" class="form-link">Entra aquí</a></p>
+      <div class="form-container">
+        <div class="form-group">
+          <input type="text" id='name' class="form-input" name="usuario" placeholder=" "/>
+          <label for="name" class="form-label">Nombre:</label>
+          <span class="form-line"></span>
+        </div>
+        <div class="form-group">
+          <input type="text" id='user' class="form-input" name="usuario" placeholder=" "/>
+          <label for="user" class="form-label">Usuario:</label>
+          <span class="form-line"></span>
+        </div>
+        <div class="form-group">
+          <input type="text" id='password' class="form-input" name="usuario" placeholder=" "/>
+          <label for='password' class='form-label'>Contraseña:</label>
+          <span class="form-line"></span>
+        </div>
+        <input type='submit' class="form-submit" value="Entrar">
       </div>
-      <div>
-        <label class="form-salut">Ingresa tu usuario y contraseña</label>
-      </div>
-      <div class="form-div">
-        <label>Usuario</label>
-      </div>
-      <div class="form-div">
-        <input type="text" name="usuario" />
-      </div>
-      <div class="form-div">
-        <label>Contraseña</label>
-      </div>
-      <div class="form-div">
-        <input type="password" name="password" />
-      </div>
-      <div>
-        <button class="boton-enter" type="submit">INGRESAR</button>
-      </div>
-      <a  href="/register">Si no tenes cuenta, Creala aqui</a>
-    </form>
+</section>      
 <!--FOOTER -->
 <%- include("../partials/footer") %>
