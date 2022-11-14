@@ -266,7 +266,7 @@ font-weight: 400;
 }
 
 /*-----------------LOGIN-----------------*/
-.login-section{
+.login-section, .register-section{
   background-color: #e5e5e5;
   background-image:  radial-gradient(#ececec 0.5px, transparent 0.5px), radial-gradient(#ececec 0.5px, #e5e5e5 0.5px);
   background-size: 20px 20px;
@@ -274,12 +274,22 @@ font-weight: 400;
   display: flex;
   min-height: 100vh;
 }
-.form-login{
+.form-login {
   background-color: white;
   margin: auto;
   width: 90%;
   max-width: 400px;
   padding: 4.5em 3em;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px -5px rgb(0, 0, 0 / 30%);
+  text-align: center;
+}
+.form-register{
+  background-color: white;
+  margin: auto;
+  width: 90%;
+  max-width: 400px;
+  padding: 1em 1em;
   border-radius: 10px;
   box-shadow: 0 5px 10px -5px rgb(0, 0, 0 / 30%);
   text-align: center;

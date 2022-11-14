@@ -1,42 +1,45 @@
 <%- include("../partials/head", {tituloWeb: "REGISTRO - Bicis 7G", cssstyle: "/css/styles.css"})%>
 <body>
 <!--HEADER -->
-<%- include("../partials/header-log-reg") %>
+<%- include("../partials/header") %>
 <!--FORMULARIO REGISTRO-->
-    
-        
-        <form class="register-form" action="/" method="post">
-          <h2 class="form-title">Resgístrate:</h2>
-          <div class="field">
-            <label for="nombreApellido">Nombre y apellido:</label>
-            <input type="text" required minlength="2" placeholder="Nombre Apellido" name="nombreApellido" id="nombreApellido">
-          </div>
-          <div class="field">
-            <label for="usuario">Nombre de usuario:</label>
-            <input type="text" required minlength="2" placeholder="Nombre de usuario" name="usuario" id="usuario">
-          </div>
-          <div class="field">
-            <label for="fechaNacimiento">Fecha de nacimiento:</label>
-            <input type="date" required placeholder="Fecha de nacimiento" name="fechaNacimiento" id="fechaNacimiento">
-          </div>
-          <div class="field">
-            <label for="domicilio">Domicilio:</label>
-            <input type="text" required minlength="2" placeholder="Domicilio" name="domicilio" id="domicilio">
-          </div>
-          <div class="field">
-            <label for="contrasena">Contraseña:</label>
-            <input type="password" required minlength="4" placeholder="Contraseña" name="contrasena" id="contrasena">
-            <span class="error-message">Este campo es requerido. Ingrese al menos cuatro carácteres.</span>
-          </div>
-          <div class="field">
-            <label for="confirmaContrasena">Confirmar contraseña:</label>
-            <input type="password" required minlength="4" placeholder="Confirmar contraseña" name="confirmaContrasena" id="confirmaContrasena">
-            <span class="error-message">Este campo es requerido. Ingrese al menos cuatro carácteres.</span>
-          </div>
-          <nav>
-            <input type="submit" id="submit-register">
-            <input type="reset" id="reset-register">
-          </nav>
-        </form>
+<section class="register-section">
+  <form class="form-register" action="/" method="post">
+    <h2 class="form-title">Resgístrate:</h2>
+    <div class="form-container">
+      <div class="form-group">
+        <input type="text" id='nombreApellido' required minlength="2" class="form-input" name='nombreApellido' placeholder=" "/>
+        <label for="nombreApellido" class="form-label">Nombre y Apellido:</label>
+        <span class="form-line"></span>
+      </div>
+      <div class="form-group">
+        <input type="text" id='user' required minlength="2" class="form-input" name="usuario" placeholder=" "/>
+        <label for="user" class="form-label">Nombre de usuario:</label>
+        <span class="form-line"></span>
+      </div>
+      <div class="form-group">
+        <input type="date" id='fechaNacimiento' class="form-input" name="fechaNacimiento" placeholder=" "/>
+        <label for='fechaNacimiento' class='form-label'>Fecha de nacimiento:</label>
+        <span class="form-line"></span>
+      </div>
+      <div class="form-group">
+        <input type="text" id='domicilio' required minlength="2" class="form-input" name="domicilio" placeholder=" "/>
+        <label for='domicilio' class='form-label'>Domicilio:</label>
+        <span class="form-line"></span>
+      </div>
+      <div class="form-group">
+        <input type="password" id='contrasena'required minlength="8" class="form-input" name="contrasena" placeholder=" "/>
+        <label for='contrasena' class='form-label'>Contraseña:</label>
+        <span class="form-line"></span>
+      </div>
+      <div class="form-group">
+        <input type="password" id='confirmaContrasena'required minlength="8" class="form-input" name="confirmaContrasena" placeholder=" "/>
+        <label for='confirmaContrasena' class='form-label'>Confirmar contraseña:</label>
+        <span class="form-line"></span>
+      </div>
+      <input type="submit" class="form-submit" id="submit-register">
+      <input type="reset" class="form-submit" id="reset-register">
+    </div>
+</section>
 <!--FOOTER -->
 <%- include("../partials/footer") %>
