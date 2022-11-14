@@ -3,50 +3,48 @@
 <!--HEADER -->
 <%- include("../partials/header") %> 
 <!--CONTENIDO PRINCIPAL -->
-<main>
-    <section id="registro">
-      <h2>Editar Producto</h2>
-      <form action="/" method="post">
-        <div class="field">
-          <label for="nameProduct">Nombre del Producto:</label>
-          <br>
-          <input type="text" required minlength="2" placeholder="Nombre del Producto" name="nameProduct" id="nameProduct">
-        </div>
-        <div class="field">
-          <label for="usuario">Descripción</label>
-          <br>
-          <input type="text" required minlength="2" placeholder="Descripción" name="description" id="description">
-        </div>
-        <div class="field">
-          <label for="fechaNacimiento">Precio</label>
-          <br>
-          <input type="number" required placeholder="Precio" name="price" id="price">
-        </div>
-        <div class="field">
-          <label for="domicilio">Descuento</label>
-          <br>
-          <input type="number" required minlength="2" placeholder="Descuento" name="descuento" id="descuento">
-        </div>
-        <div class="field">
-          <label for="contrasena">Talla</label>
-          <select class="detail-container-options-size" name="size" id="size">
-            <option value="selectSize">Seleccionar Talla</option>
-            <option value="size1">S</option>
-            <option value="size2">M</option>
-            <option value="size3">L</option>
-          </select>
-        </div>
-        <div class="field">
-            <label for="usuario">Color</label>
-            <br>
-            <input type="text" required minlength="2" placeholder="Color" name="color" id="color">
+<section class="edit-section">
+        <form class="form-edit" action="/" method="post">
+          <h2 class="form-title">Formulario de Modificación de Productos</h2>
+          <div class="form-container">
+            <div class="form-group">
+              <input type="text" id='nombreProducto' required minlength="2" class="form-input" name='nombreProducto' placeholder=" "/>
+              <label for="nombreProducto" class="form-label">Nombre del Producto:</label>
+              <span class="form-line"></span>
+            </div>
+            <div class="form-group">
+              <input type="text" id='user' required minlength="2" class="form-input" name="description" placeholder=" "/>
+              <label for="description" class="form-label">Descripción:</label>
+              <span class="form-line"></span>
+            </div>
+            <div class="form-group">
+              <input type="text" id='price' class="form-input" name="price" placeholder=" "/>
+              <label for='price' class='form-label'>Precio:</label>
+              <span class="form-line"></span>
+            </div>
+            <div class="form-group">
+              <input type="text" id='descuento' class="form-input" name="descuento" placeholder=" "/>
+              <label for='derscuento' class='form-label'>Descuento:</label>
+              <span class="form-line"></span>
+            </div>
+            <div class="form-group">
+              <select class="form-input" name="talla" id="talla">
+                <option value="selectSize">Seleccionar Talla</option>
+                <option value="size1">S</option>
+                <option value="size2">M</option>
+                <option value="size3">L</option>
+              </select>
+              <label for='talla' class='form-label'>Talla:</label>
+              <span class="form-line"></span>
+            </div>
+            <div class="form-group">              
+            <input type="text" id='color'required minlength="3" class="form-input" name="color" placeholder=" "/>
+              <label for='color' class='form-label'>Color:</label>
+              <span class="form-line"></span>
+            </div>
+            <input type="submit" class="form-submit" id="submit-register">
+            <input type="reset" class="form-submit" id="reset-register">
           </div>
-        <nav>
-          <input type="submit" id="submit-editProd">
-          <input type="reset" id="reset-editprod">
-        </nav>
-      </form>
-    </section>
-</main>
+  </section>
 <!--FOOTER -->
-<%- include("../partialsfooter") %>
+<%- include("../partials/footer") %>
