@@ -367,6 +367,18 @@ color: black;
   border-radius: .5em;
 }
 
+.not-found{
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  padding-top: 20px;
+}
+.not-found h1{
+  padding-top: 20px;
+}
+
+
 /*--------------MEDIA QUERIES--------------*/
 @media (min-width: 480px) {
   .main-header-top-bar {
