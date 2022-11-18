@@ -15,8 +15,11 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/src/views"));
 
 // ************ Route System require and use() ************
-const rutasMain = require ("./src/routes/main.js");
+const rutasMain = require ("./src/routes/main");
+const productsRouter = require('./src/routes/products'); // Rutas /products
+
 app.use("/", rutasMain);
+app.use('/products', productsRouter);
 
 
 // ************ error handler ************
