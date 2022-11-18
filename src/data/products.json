@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "nombre": "phasellus sit amet erat",
+    "descripción": "nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet",
+    "marca": "pretium",
+    "categoria": "Categoria3",
+    "precio": 5223.02,
+    "imagen": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png",
+    "colores": "Mauv",
+    "talles": "XL"
+  },
+  {
+    "id": 2,
+    "nombre": "vestibulum",
+    "descripción": "eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis",
+    "marca": "ante vestibulum",
+    "categoria": "Categoria2",
+    "precio": 6148.32,
+    "imagen": "PRODUCTS-golden-monkey.jpg",
+    "colores": "Indigo",
+    "talles": "S"
+  },
+  {
+    "id": 3,
+    "nombre": "volutpat dui",
+    "descripción": "bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh in lectus",
+    "marca": "libero nullam sit amet",
+    "categoria": "Categoria1",
+    "precio": 3695.46,
+    "imagen": "PRODUCTS-product_f_i_filtro_detalle_tacita.jpg",
+    "colores": "Crimson",
+    "talles": "XS"
+  },
+  {
+    "id": 4,
+    "nombre": "vitae nisl aenean lectus pellentesque eget",
+    "descripción": "in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula consequat",
+    "marca": "tortor sollicitudin mi sit",
+    "categoria": "Categoria1",
+    "precio": 2736.75,
+    "imagen": "PRODUCTS-te-blanco-albaricoque-maracuya.jpg",
+    "colores": "Indigo",
+    "talles": "XL"
+  },
+  {
+    "id": 5,
+    "nombre": "nunc donec",
+    "descripción": "non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh",
+    "marca": "turpis",
+    "categoria": "Categoria2",
+    "precio": 6338.97,
+    "imagen": "PRODUCTS-te-blanco-albaricoque-maracuya.jpg",
+    "colores": "Fuscia",
+    "talles": "S"
+  },
+  {
+    "id": 6,
+    "nombre": "id turpis integer",
+    "descripción": "donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed",
+    "marca": "ut dolor",
+    "categoria": "Categoria1",
+    "precio": 5632.59,
+    "imagen": "PRODUCTS-xanela-paraiso.jpg",
+    "colores": "Red",
+    "talles": "XS"
+  },
+  {
+    "id": 7,
+    "nombre": "aliquam quis turpis eget",
+    "descripción": "amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi",
+    "marca": "rutrum at",
+    "categoria": "Categoria3",
+    "precio": 9862.73,
+    "imagen": "PRODUCTS-golden-monkey.jpg",
+    "colores": "Blue",
+    "talles": "XS"
+  },
+  {
+    "id": 8,
+    "nombre": "suscipit nulla elit ac nulla sed vel",
+    "descripción": "accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla",
+    "marca": "facilisi cras non velit",
+    "categoria": "Categoria3",
+    "precio": 7187.48,
+    "imagen": "PRODUCTS-te-blanco-albaricoque-maracuya.jpg",
+    "colores": "Crimson",
+    "talles": "M"
+  },
+  {
+    "id": 9,
+    "nombre": "condimentum curabitur in",
+    "descripción": "habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia",
+    "marca": "dapibus at",
+    "categoria": "Categoria3",
+    "precio": 1556.28,
+    "imagen": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png",
+    "colores": "Khaki",
+    "talles": "S"
+  },
+  {
+    "id": 10,
+    "nombre": "ultrices posuere cubilia curae duis",
+    "descripción": "praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo",
+    "marca": "posuere cubilia curae donec",
+    "categoria": "Categoria3",
+    "precio": 4088.43,
+    "imagen": "PRODUCTS-te-blanco-albaricoque-maracuya.jpg",
+    "colores": "Violet",
+    "talles": "XS"
+  }
+]
