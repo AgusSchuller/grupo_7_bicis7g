@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require("path");
 
 const productsFilePath = path.join(__dirname, '../database/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const bicis = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -11,7 +11,7 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const mainController = {
     index: (req, res)=>{
-       res.render("index")
+       res.render("index", {bicis, toThousand})
     },
     login: (req, res)=>{
         res.render("./users/login")

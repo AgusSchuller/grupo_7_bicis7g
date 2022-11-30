@@ -6,7 +6,7 @@
   <!--DETALLE DEL PRODUCTO-->
   <section class="detail-section">
     <div class="detail-container-image">
-      <img src="/img/mtb-poly-t7-1.jpg" />
+      <img src=<%= miBici.img%> />
     </div>
     <div class="detail-container-description">
       <h2 class="detail-container-product"><%= miBici.nombre%></h2>
@@ -27,9 +27,8 @@
             id="color"
           >
             <option value="selectColor">Seleccionar Color</option>
-            <option value="color1">Green & Blue</option>
-            <option value="color2">Purple & Yellow</option>
-            <option value="color3">Red & Green</option>
+            <option value="color1"><%= miBici.color%></option>
+      
           </select>
           <select class="detail-container-options-size" name="size" id="size">
             <option value="selectSize">Seleccionar Talla</option>

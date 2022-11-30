@@ -1,19 +1,31 @@
 [
   {
+    "id": "1",
     "nombre": "Bicicleta porp ekano",
-    "descripcion": "Soy una bici re copada 3",
-    "precio": "$500000",
+    "descripcion": "Soy una bici re copada",
+    "precio": "U$D 500000",
     "descuento": "15 %",
     "talla": "selectSize",
     "color": "Violeta",
-    "id": "1"
+    "id": "1",
+    "img": "/img/ebike-poly-bromo-1.jpg"
   },
   {
-    "id": "11",
+    "id": "2",
     "nombre": "Bicicleta Montaña",
-    "descripcion": "Soy una bici re copado",
-    "precio": "500000",
-    "descuento": "15",
-    "imagen": "bici-1669769770578.jpeg"
+    "descripcion": "Soy una bici re copada",
+    "precio": "U$D 500000",
+    "descuento": "15 %",
+    "color": "Violeta",
+    "img": "/img/ebike-porp-ekano-1.jpg"
+  },
+  {
+    "id": "3",
+    "nombre": "Bicicleta Urbana",
+    "descripcion": "Soy una bici re copada",
+    "precio": "U$D 500000",
+    "descuento": "15 %",
+    "color": "Violeta",
+    "img": "/img/mtb-prop-spindrift-1.jpg"
   }
-]
+] 

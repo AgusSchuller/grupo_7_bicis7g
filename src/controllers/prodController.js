@@ -31,8 +31,9 @@ module.exports = {
             nombre : req.body.nombre,
             descripcion: req.body.descripcion,
             precio: req.body.precio,
+            color: req.body.color,
             descuento: req.body.descuento,
-            imagen: req.file.filename
+            img:'/img/' + req.file.filename
         }
         bicis.push(nuevoProducto);
         let nuevoProductoGuardar = JSON.stringify(bicis,null,2);
@@ -59,7 +60,7 @@ module.exports = {
     },
     delete: (req,res) =>{
         const biciDeleteId = req.params.id;
-        const bicisFinal = bicis.filter(moto => moto.id != biciDeleteId);
+        const bicisFinal = bicis.filter(bici => bici.id != biciDeleteId);
         let bicisGuardar = JSON.stringify(bicisFinal,null,2)
         fs.writeFileSync(path.resolve(__dirname, '../database/products.json'),bicisGuardar);
         res.redirect('/products');
