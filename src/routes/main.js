@@ -6,16 +6,6 @@ const multer = require ('multer')
 // ************ Controller Require ************
 const mainController = require("../controllers/mainController");
 
-/*** MULTER ***/ 
-var storage = multer.diskStorage({
-    destination: function (req, file , cb){
-        cb(null, './public/img')
-    },
-    filename: function (req, file , cb){
-        cb(null, file.fieldname + '-' + Date.now() + '.png')
-    }
-})
-var upload = multer ({storage: storage})
 
 router.get("/", mainController.index);
 router.get("/login", mainController.login);

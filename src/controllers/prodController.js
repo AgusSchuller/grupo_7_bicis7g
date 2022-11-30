@@ -8,7 +8,7 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 module.exports = {
     index: (req,res) =>{
-        res.render(path.resolve(__dirname, '../views/products/listado'), {bicis});
+        res.render(path.resolve(__dirname, '../views/products/listado'), {bicis, toThousand});
     },
     show: (req,res) =>{
         let miBici;
@@ -17,7 +17,7 @@ module.exports = {
                 miBici = bici;
             }
         });
-        res.render(path.resolve(__dirname, '../views/products/productDetail'), {miBici})
+        res.render(path.resolve(__dirname, '../views/products/productDetail'), {miBici, toThousand})
     },
     create: (req,res) =>{   
         res.render(path.resolve(__dirname, '../views/products/newProd'));
@@ -35,7 +35,7 @@ module.exports = {
             imagen: req.file.filename
         }
         bicis.push(nuevoProducto);
-        let nuevoProductoGuardar = JSON.stringify(motos,null,2);
+        let nuevoProductoGuardar = JSON.stringify(bicis,null,2);
         fs.writeFileSync(path.resolve(__dirname,'../database/products.json'), nuevoProductoGuardar);
         res.redirect('/products');
     },
@@ -53,7 +53,7 @@ module.exports = {
             }
             return bici;
         })
-        let biciActualizar = JSON.stringify(biciUpdate,null,2);
+        let biciActualizar = JSON.stringify(bicisUpdate,null,2);
         fs.writeFileSync(path.resolve(__dirname,'../database/products.json'),biciActualizar)
         res.redirect('/products');
     },

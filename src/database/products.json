@@ -1,26 +1,19 @@
 [
   {
-    "id": 1,
     "nombre": "Bicicleta porp ekano",
-    "descripción": "Bici para divertirse en la ciudad",
-    "marca": "Porp",
-    "categoria": "Categoria1",
-    "precio": 3695.46,
-    "descuento":15, 
-    "imagen": "ebike-porp-ekano-3.jpg",
-    "colores": "Verde",
-    "talles": "S"
+    "descripcion": "Soy una bici re copada 3",
+    "precio": "$500000",
+    "descuento": "15 %",
+    "talla": "selectSize",
+    "color": "Violeta",
+    "id": "1"
   },
   {
-    "id": 2,
-    "nombre": "Bicileta poly bromo",
-    "descripción": "Nueva bici para la montaña",
-    "marca": "Bromo",
-    "categoria": "Categoria1",
-    "precio": 2736.75,
-    "descuento":15, 
-    "imagen": "ebike-poly-bromo-1.jpg",
-    "colores": "Indigo",
-    "talles": "L"
+    "id": "11",
+    "nombre": "Bicicleta Montaña",
+    "descripcion": "Soy una bici re copado",
+    "precio": "500000",
+    "descuento": "15",
+    "imagen": "bici-1669769770578.jpeg"
   }
 ]
