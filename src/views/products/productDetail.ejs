@@ -9,37 +9,14 @@
       <img src="/img/mtb-poly-t7-1.jpg" />
     </div>
     <div class="detail-container-description">
-      <h2 class="detail-container-product">POLYGON SISKIU T7</h2>
+      <h2 class="detail-container-product"><%= miBici.nombre%></h2>
       <h3 class="detail-container-price">
-        U$D 2.100,00
-        <span class="detail-container-price-discount">20% OFF</span>
+        <%= miBici.precio %>
+        <span class="detail-container-price-discount"><%= miBici.descuento%></span>
       </h3>
       <div class="detail-container-specification">
         <p class="detail-container-specification-pargraph">
-          La Siskiu T cuenta con la geometria de una bicicleta de trail moderna,
-          logrando el equilibrio entre control de alta velocidad y manejo
-          divertido. Diseñados en torno a nuestro sistema Wheel Fit Size System,
-          los modelos de 29 "cuentan con 135 mm de recorrido trasero con
-          horquillas de 140 mm, mientras que las bicicletas de 27,5" tienen 140
-          mm en la parte trasera y 150 mm en la delantera. Los seat tube se han
-          acortado significativamente para permitir tubos retráctiles de 150 mm
-          en el marco S y M, 170 mm en los L y XL. Las vainas se acortaron para
-          mantener la bicicleta más ágil y divertida, pero también para
-          garantizar que la distancia entre ejes general no sea demasiado larga
-          para la conducción general por senderos.
-        </p>
-        <br />
-        <p class="detail-container-specification-pargraph">
-          El Siskiu T utiliza el probado diseño FAUX BAR. El tubería está
-          construida alrededor del puente pivotante Unibody de una pieza que
-          reduce el peso del cuadro pero también mejora la rigidez y reduce la
-          flexión lateral del amortiguador trasero bajo carga. La cinemática de
-          la bicicleta mantiene la naturaleza de la generación anterior
-          mejorando al mismo tiempo la eficiencia de la escalada y la absorción
-          de pequeños baches.Si está buscando una bicicleta para hacerlo todo
-          con un estilo increíble y componentes confiables, de alta calidad y
-          listos para el sendero la Siskiu T es la elección correcta para usted,
-          para cualquier sendero, cualquier ciclista.
+          <%= miBici.descripcion %>
         </p>
       </div>
       <form action="">
@@ -74,6 +51,7 @@
           <button class="detail-container-buy-add">Añadir al Carrito</button>
         </div>
       </form>
+      <a href="/administrar" class="btn btn-danger">Volver</a>
     </div>
   </section>
   <!--FOOTER -->

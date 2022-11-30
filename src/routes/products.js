@@ -1,44 +1,27 @@
-// ************ Require's ************
 const express = require('express');
-const multer = require ('multer')
 const router = express.Router();
+const path = require('path');
+const multer = require('multer');
 
-// ************ Controller Require ************
-const productsController = require('../controllers/productsController');
+const prodController= require(path.resolve(__dirname,'../controllers/prodController'));
 
-/*** MULTER ***/ 
 var storage = multer.diskStorage({
-    destination: function (req, file , cb){
-        cb(null, './public/img')
+    destination: function (req, file, cb) {
+      cb(null, path.resolve(__dirname, '../public/img'));
     },
-    filename: function (req, file , cb){
-        cb(null, file.fieldname + '-' + Date.now() + Path2D.extname(file.originalname))
+    filename: function (req, file, cb) {
+      cb(null, 'bici-'+Date.now()+path.extname(file.originalname))
     }
-})
-var upload = multer ({storage: storage})
+  })
+   
+  const upload = multer({ storage })
 
-/*** GET ALL PRODUCTS ***/ 
-router.get('/', productsController.index); 
-
-/*** CARRITO ***/ 
-router.get("/productCart", productsController.productCart);
-
-
-/*** CREATE ONE PRODUCT ***/ 
-router.get('/create', productsController.create); 
-router.post('/', productsController.store); 
-
-
-/*** GET ONE PRODUCT ***/ 
-router.get('/detail/:id', productsController.detail); 
-
-/*** EDIT ONE PRODUCT ***/ 
-router.get('/edit/:id', productsController.edit); 
-router.patch('/edit/:id', productsController.update); 
-
-
-/*** DELETE ONE PRODUCT***/ 
-router.delete('/delete/:id', productsController.destroy); 
-
+router.get('/products', prodController.index);
+router.get('/products/detail/:id', prodController.show)
+router.get('/products/create', prodController.create);
+router.post('/products/create', upload.single('imagen'), prodController.save);
+router.get('/products/edit/:id', prodController.edit);
+router.put('/products/edit/:id', upload.single('imagen'), prodController.update);
+router.get('/products/delete/:id', prodController.delete);
 
 module.exports = router;

@@ -378,7 +378,20 @@ color: black;
   padding-top: 20px;
 }
 
-
+.tituloAdministrador{
+  padding: 20px;
+}
+tr td{
+  padding: 20px;
+}
+tr td a, article a {
+  text-decoration: none;
+  color: #222222;
+}
+.administrador{
+  margin-left: 600px;
+  margin-top: 20px;
+}
 /*--------------MEDIA QUERIES--------------*/
 @media (min-width: 480px) {
   .main-header-top-bar {

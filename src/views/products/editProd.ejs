@@ -4,26 +4,26 @@
 <%- include("../partials/header") %> 
 <!--CONTENIDO PRINCIPAL -->
 <section class="edit-section">
-        <form class="form-edit" action="/" method="post" enctype="multipart/form-data">
+        <form class="form-edit" action="/products/edit/<%= biciEditar.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
           <h2 class="form-title">Formulario de Modificación de Productos</h2>
           <div class="form-container">
             <div class="form-group">
-              <input type="text" id='nombreProducto' required minlength="2" class="form-input" name='nombreProducto' placeholder=" "/>
+              <input type="text"  required minlength="2" value="<%= biciEditar.nombre%>" class="form-input" name='nombre' placeholder=" " />
               <label for="nombreProducto" class="form-label">Nombre del Producto</label>
               <span class="form-line"></span>
             </div>
             <div class="form-group">
-              <input type="text" id='user' required minlength="2" class="form-input" name="description" placeholder=" "/>
+              <input type="text"  required minlength="2" value="<%= biciEditar.descripcion%>" class="form-input" name="descripcion" placeholder=" "/>
               <label for="description" class="form-label">Descripción</label>
               <span class="form-line"></span>
             </div>
             <div class="form-group">
-              <input type="text" id='price' class="form-input" name="price" placeholder=" "/>
+              <input type="text"  class="form-input" name="precio" placeholder=" " value="<%= biciEditar.price%>"/>
               <label for='price' class='form-label'>Precio</label>
               <span class="form-line"></span>
             </div>
             <div class="form-group">
-              <input type="text" id='descuento' class="form-input" name="descuento" placeholder=" "/>
+              <input type="text" class="form-input" name="descuento" placeholder=" "/>
               <label for='derscuento' class='form-label'>Descuento</label>
               <span class="form-line"></span>
             </div>
