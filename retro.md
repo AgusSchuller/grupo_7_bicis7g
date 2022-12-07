@@ -13,3 +13,13 @@ Retrospectiva de sprint 2:
 
 -Dejar de hacer:  
 .Hacer mas push colaborativo entre todos.
+
+Retrospectiva de sprint 3:
+
+-Hicimos bien: 
+
+-Hicimos mal: 
+
+-Empezar a hacer: 
+
+-Dejar de hacer:  
