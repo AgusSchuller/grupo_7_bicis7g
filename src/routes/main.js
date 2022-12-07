@@ -1,24 +1,17 @@
+// ************ Require's ************
 const express = require("express");
-
-const mainController = require("../controllers/mainController");
-
 let router = express.Router();
+const multer = require ('multer')
 
+// ************ Controller Require ************
+const mainController = require("../controllers/mainController");
 
 
 router.get("/", mainController.index);
-
 router.get("/login", mainController.login);
-
 router.get("/register", mainController.register);
 
-router.get("/productCart", mainController.productCart);
-
-router.get("/productDetail", mainController.productDetail);
-
-router.get("/newProd", mainController.newProd);
-
-router.get("/editProd", mainController.editProd)
-
+/*** CARRITO ***/ 
+router.get("/productcart", mainController.productCart);
 
 module.exports = router;

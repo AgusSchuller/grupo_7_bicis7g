@@ -1,4 +1,4 @@
-Retrospectiva de sprint 2:
+Retrospectiva de sprint 3:
 
 -Hicimos bien: 
 .Seguimos las reglas del equipo para manejar github.
@@ -6,20 +6,8 @@ Retrospectiva de sprint 2:
 .Utilizar Trello para organizar las tareas.
 
 -Hicimos mal: 
-.Ponernos al día con la teoria tarde.
+.No estar al día con la teoria.
 
 -Empezar a hacer: 
 .Estar al día con la teoria. Poner 1 día mas a la semana para daily.
-
--Dejar de hacer:  
 .Hacer mas push colaborativo entre todos.
-
-Retrospectiva de sprint 3:
-
--Hicimos bien: 
-
--Hicimos mal: 
-
--Empezar a hacer: 
-
--Dejar de hacer:  

@@ -5,37 +5,27 @@
   <%- include("../partials/header") %>
   <!--CONTENIDO PRINCIPAL -->
   <section class="edit-section">
-    <form class="form-edit" action="/" method="post">
+    <form class="form-edit" action="/products/create" method="POST" enctype="multipart/form-data">
       <h2 class="form-title">Formulario de Alta de Productos</h2>
       <div class="form-container">
         <div class="form-group">
-          <input type="text" id='nombreProducto' required minlength="2" class="form-input" name='nombreProducto' placeholder=" "/>
+          <input type="text"  required minlength="2" class="form-input" name='nombre' placeholder=" "/>
           <label for="nombreProducto" class="form-label">Nombre del Producto</label>
           <span class="form-line"></span>
         </div>
         <div class="form-group">
-          <input type="text" id='user' required minlength="2" class="form-input" name="description" placeholder=" "/>
+          <input type="text" required minlength="2" class="form-input" name="descripcion" placeholder=" "/>
           <label for="description" class="form-label">Descripción</label>
           <span class="form-line"></span>
         </div>
         <div class="form-group">
-          <input type="text" id='price' class="form-input" name="price" placeholder=" "/>
+          <input type="text"  class="form-input" name="precio" placeholder=" "/>
           <label for='price' class='form-label'>Precio</label>
           <span class="form-line"></span>
         </div>
         <div class="form-group">
-          <input type="text" id='descuento' class="form-input" name="descuento" placeholder=" "/>
+          <input type="text"  class="form-input" name="descuento" placeholder=" "/>
           <label for='derscuento' class='form-label'>Descuento</label>
-          <span class="form-line"></span>
-        </div>
-        <div class="form-group">
-          <select class="form-input" name="talla" id="talla">
-            <option value="selectSize">Seleccionar Talla</option>
-            <option value="size1">S</option>
-            <option value="size2">M</option>
-            <option value="size3">L</option>
-          </select>
-          <label for='talla' class='form-label'>Talla</label>
           <span class="form-line"></span>
         </div>
         <div class="form-group">              
@@ -43,6 +33,7 @@
           <label for='color' class='form-label'>Color</label>
           <span class="form-line"></span>
         </div>
+        <input type="file" name="imagen" >
         <input type="submit" class="form-submit" id="submit-register">
         <input type="reset" class="form-submit" id="reset-register">
       </div>

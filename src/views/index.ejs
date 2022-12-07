@@ -1,51 +1,32 @@
-<%- include("partials/head", {tituloWeb: "Bienvenidos Bicis 7G", cssstyle: "/css/styles.css"})%> 
+<%- include("partials/head", {tituloWeb: "Bienvenidos Bicis 7G", cssstyle:
+"/css/styles.css"})%>
 <body>
-<!--HEADER -->
-<%- include("partials/header") %>
-<!--CONTENIDO PRINCIPAL -->
+  <!--HEADER -->
+  <%- include("partials/header") %>
+  <!--CONTENIDO PRINCIPAL -->
   <main>
-      <section class="bienvenida">
-        <img src="/img/img-header-2.jpg"/>
-      </section>
-<!--PRODUCTOS DESTACADOS -->
-      <section class="busqueda">
-          <h2>Productos destacados</h2>
-        <article class="vamosabuscar"> 
+    <section class="bienvenida">
+      <img src="/img/img-header-2.jpg" />
+    </section>
+    <!--PRODUCTOS DESTACADOS -->
+    <section class="busqueda">
+      <h2>Productos destacados</h2>
+      <article class="vamosabuscar">
+       
+        <% bicis.forEach(bici => { %>
         <div class="producto">
-          <a href="/productdetail"><img src="/img/mtb-poly-t7-1.jpg" /></a>
+          <a href="/products/detail/<%= bici.id%>"><img src="<%= bici.img%>" /></a>
           <div class="detalle-producto">
-            <h4 class="precio">U$D 2.100,00</h4>
-            <h4 class="descuentos">20% OFF</h4>
-            <h3>POLYGON SISKU T7</h3>
+            <h4 class="precio"><%= bici.precio%></h4>
+            <h4 class="descuentos"><%= bici.descuento%></h4>
+            <h3><%= bici.nombre%></h3>
           </div>
         </div>
-        <div class="producto">
-          <a href="/productdetail"><img src="/img/mtb-prop-tyee-2.jpg" /></a>
-          <div class="detalle-producto">
-            <h4 class="precio">U$D 2.400,00</h4>
-            <h4 class="descuentos">20% OFF</h4>
-            <h3>PROPAIN TYEE</h3>
-          </div>
-        </div>
-        <div class="producto">
-          <a href="/productdetail"><img src="/img/mtb-prop-spindrift-2.jpg" /></a>
-          <div class="detalle-producto">
-            <h4 class="precio">U$D 3.000,00</h4>
-            <h4 class="descuentos">10% OFF</h4>
-            <h3>PROPAIL SPINDRIFT</h3>
-          </div>
-        </div>
-        <div class="producto">
-          <a href="/productdetail"><img src="/img/mtb-poly-t8-1.jpg" /></a>
-          <div class="detalle-producto">
-            <h4 class="precio">U$D 2.400,00</h4>
-            <h4 class="descuentos">10% OFF</h4>
-            <h3>POLYGON SISKU T8</h3>
-          </div>
-        </div>
-      </article> 
-      </section>
-      <div class="separacion"></div>
-    </main>
-<!-- FOOTER -->
-<%- include("partials/footer") %>
+        <% }); %>
+      </article>
+    </section>
+    <div class="separacion"></div>
+  </main>
+  <!-- FOOTER -->
+  <%- include("partials/footer") %>
+</body>
