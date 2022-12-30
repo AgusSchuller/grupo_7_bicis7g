@@ -6,10 +6,10 @@ Te invitamos a navegar por nuestro sitio web para que descubras todas las propue
 
 ## ¡Aqui un poco de nuestras bicis!
 
-⋅⋅* Polygon Bikes:
+- Polygon Bikes:
 Durante más de 25 años, Polygon Bikes ha estado diseñando, construyendo e ingeniando bicicletas de clase mundial en asociación con ingenieros, diseñadores industriales, pensadores creativos y ciclistas profesionales con sede en América del Norte, Europa y Asia. Nos apasiona la innovación y trabajamos duro cada temporada para producir diseños frescos y auténticos con relevancia mundial. Somos una de las pocas marcas mundiales de bicicletas que posee nuestras instalaciones de fabricación, lo que nos permite controlar todos los aspectos del proceso de fabricación, desde la artesanía de la soldadura manual de nuestros cuadros hasta nuestras instalaciones de montaje y pintura líderes en la industria. Al producir cerca de un millón de bicicletas por año, también nos permite aprovechar importantes eficiencias de costos que la mayoría de las marcas no pueden lograr. Esto da como resultado nuestra capacidad para ofrecer una amplia gama de bicicletas de alta calidad en las que puede confiar a algunos de los precios más competitivos disponibles en el mercado.
 
-⋅⋅* Propain Bikes:
+- Propain Bikes:
 Exitoso gracias a la ingeniería de calidad alemana. El deseo de una tecnología de bicicletas sólida y funcional, una gran pasión por andar en bicicleta y demasiadas cervezas: los ingredientes que inspiraron a Robert Krauss y Markus Zander en sus vacaciones en bicicleta de montaña en Whistler en 2006 para fundar la marca Propain Bicycles. Propain es sinónimo de bicicletas dedicadas a la gravedad y centradas en el máximo placer! Más conducción, menos desgarro. Una filosofía que condujo al éxito de Propain. Para 2018, hay diez modelos diferentes, que van desde el Rage downhill rig hasta el hardtail para niños Dreckspatz. ¿Cómo es eso posible? Se logró con un equipo de entusiastas de la bicicleta dedicados que viven montando, son parte de la comunidad ciclista y a través de innumerables recorridos por senderos saben lo que funciona. El equipo de ingeniería garantiza que Propain tiene el control de todo el proceso de desarrollo, desde la primera idea hasta los planos finales de producción.
 
 ## ¿Para quien son nuestras bicis?
