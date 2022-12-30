@@ -45,4 +45,4 @@ Aqui te dejamos los links de los cuales nos vamos a basar para armar nuestro pro
 ## Tablero de trabajo:
 https://trello.com/b/TNCM1ZWR/proyecto-integrador-grupo-7
 
-**¡Gracias por compartir con nosotros esta aventura! **
+**¡Gracias por compartir con nosotros esta aventura!**
