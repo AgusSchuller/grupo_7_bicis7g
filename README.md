@@ -1,4 +1,4 @@
--BICIS 7G-
+#-BICIS 7G-
 
 ¡Bienvenidos a Bicis 7G!
 Somos una empresa joven que esta empezando a introducirse en el mercado Argentino de la venta de bicicletas con nuestras dos marcas premium de las cuales somos distribuidores oficiales, Polygon Bikes y Propain Bikes.
