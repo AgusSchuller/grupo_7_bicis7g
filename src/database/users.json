@@ -1,0 +1,20 @@
+[
+    {
+      "id": 1,
+      "nombre": "Bicicleta porp ekano",
+      "apellido": "Bici para divertirse en la ciudad",
+      "email": "Porp",
+      "contraseña": "Categoria1",
+      "categoria": 1,
+      "imagen": "ebike-porp-ekano-3.jpg"
+    },
+    {
+      "id": 1,
+      "nombre": "Bicicleta porp ekano",
+      "apellido": "Bici para divertirse en la ciudad",
+      "email": "Porp",
+      "contraseña": "Categoria1",
+      "categoria": 2,
+      "imagen": "ebike-porp-ekano-3.jpg"
+    }
+  ]

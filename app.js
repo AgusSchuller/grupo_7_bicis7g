@@ -3,7 +3,7 @@ const express = require("express");
 const path = require("path");
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 
-// ************ express() - (don't touch) ************
+// ************ express() ************
 const app = express();
 
 /****************** PUBLIC PATH *************************/
@@ -11,12 +11,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 const publicPath = path.resolve(__dirname, './public');
 app.use( express.static(publicPath) );
 
-// ************ Middlewares - (don't touch) ************
+// ************ Middlewares ************
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-// ************ Template Engine - (don't touch) ************
+// ************ Template Engine ************
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "./src/views"));
 
@@ -25,6 +25,8 @@ const rutasMain = require ("./src/routes/main");
 app.use("/", rutasMain);
 const rutasProd = require ("./src/routes/products")
 app.use(rutasProd)
+const rutasUsers= require ("./src/routes/users")
+app.use(rutasUsers)
 
 // ************ error handler ************
 app.use((req, res, next)=>{
