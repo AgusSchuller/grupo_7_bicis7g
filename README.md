@@ -1,4 +1,4 @@
-# **BICIS 7G**
+# BICIS 7G
 
 ## ¡Bienvenidos a Bicis 7G! :bicyclist: :mountain_biking_man:
 Somos una empresa joven que esta empezando a introducirse en el mercado Argentino de la venta de bicicletas con nuestras dos marcas premium de las cuales somos distribuidores oficiales, Polygon Bikes y Propain Bikes.
@@ -45,4 +45,4 @@ Aqui te dejamos los links de los cuales nos vamos a basar para armar nuestro pro
 ## Tablero de trabajo:
 https://trello.com/b/TNCM1ZWR/proyecto-integrador-grupo-7
 
-** ¡Gracias por compartir con nosotros esta aventura! **
+****¡Gracias por compartir con nosotros esta aventura! 
