@@ -6,20 +6,20 @@
 <section class="register-section">
   <form class="form-register" action="/register" method="post" enctype="multipart/form-data">
     <h2 class="form-title">Resgístrate</h2>
+    <% if(locals.errors) { %>
+      <% for (let oneError in errors) { %>
+        <p> <%= errors[oneError].msg %></p>
+      <% } %>
+  <% } %>
     <div class="form-container">
       <div class="form-group">
-        <input type="text" id='nombreApellido' required type="text" class="form-input" name='nombreApellido' placeholder=" "/>
-        <label for="nombreApellido" class="form-label">Nombre y Apellido</label>
+        <input type="text" id='name' class="form-input" name='name' placeholder=" "/>
+        <label for="name" class="form-label">Nombre</label>
         <span class="form-line"></span>
       </div>
       <div class="form-group">
-        <input type="text" id='user' required minlength="2" class="form-input" name="user" placeholder=" "/>
-        <label for="user" class="form-label">Nombre de usuario</label>
-        <span class="form-line"></span>
-      </div>
-      <div class="form-group">
-        <input type="date" id='fechaNacimiento' class="form-input" name="fechaNacimiento" placeholder=" "/>
-        <label for='fechaNacimiento' class='form-label'>Fecha de nacimiento</label>
+        <input type="text" id='apellido' class="form-input" name='apellido' placeholder=" "/>
+        <label for="apellido" class="form-label">Apellido</label>
         <span class="form-line"></span>
       </div>
       <div class="form-group">
@@ -38,7 +38,7 @@
         <span class="form-line"></span>
       </div>
       <div class="form-group">
-        <input type="file" id='image-users' required minlength="2" class="form-input" name="image-users" placeholder=" "/>
+        <input type="file" id='image-users' class="form-input" name="image-users" placeholder=" "/>
         <label for='image-users' class='form-label'>Seleccionar Imagen</label>
         <span class="form-line"></span>
       </div>
