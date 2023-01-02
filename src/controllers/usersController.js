@@ -13,6 +13,17 @@ const usersController = {
   register: (req, res) => {
     res.render("./users/register");
   },
+  ingresar: {
+    
+  },
+  create: {
+    
+
+  },
+  logout: {
+    
+
+  }
 };
 
 module.exports = usersController;

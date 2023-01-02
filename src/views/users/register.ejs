@@ -4,16 +4,16 @@
 <%- include("../partials/header") %>
 <!--FORMULARIO REGISTRO-->
 <section class="register-section">
-  <form class="form-register" action="/" method="post">
+  <form class="form-register" action="/register" method="post" enctype="multipart/form-data">
     <h2 class="form-title">Resgístrate</h2>
     <div class="form-container">
       <div class="form-group">
-        <input type="text" id='nombreApellido' required minlength="2" class="form-input" name='nombreApellido' placeholder=" "/>
+        <input type="text" id='nombreApellido' required type="text" class="form-input" name='nombreApellido' placeholder=" "/>
         <label for="nombreApellido" class="form-label">Nombre y Apellido</label>
         <span class="form-line"></span>
       </div>
       <div class="form-group">
-        <input type="text" id='user' required minlength="2" class="form-input" name="usuario" placeholder=" "/>
+        <input type="text" id='user' required minlength="2" class="form-input" name="user" placeholder=" "/>
         <label for="user" class="form-label">Nombre de usuario</label>
         <span class="form-line"></span>
       </div>
@@ -23,18 +23,23 @@
         <span class="form-line"></span>
       </div>
       <div class="form-group">
-        <input type="text" id='domicilio' required minlength="2" class="form-input" name="domicilio" placeholder=" "/>
-        <label for='domicilio' class='form-label'>Domicilio</label>
+        <input type="email" id='email'  class="form-input" name="email" placeholder=" "/>
+        <label for='email' class='form-label'>Email</label>
         <span class="form-line"></span>
       </div>
       <div class="form-group">
-        <input type="password" id='contrasena'required minlength="8" class="form-input" name="contrasena" placeholder=" "/>
-        <label for='contrasena' class='form-label'>Contraseña:</label>
+        <input type="password" id='password'required minlength="8" class="form-input" name="password" placeholder=" "/>
+        <label for='password' class='form-label'>Contraseña:</label>
         <span class="form-line"></span>
       </div>
       <div class="form-group">
-        <input type="password" id='confirmaContrasena'required minlength="8" class="form-input" name="confirmaContrasena" placeholder=" "/>
-        <label for='confirmaContrasena' class='form-label'>Confirmar contraseña</label>
+        <input type="password" id='confirm_password'required minlength="8" class="form-input" name="confirm_password" placeholder=" "/>
+        <label for='confirm_password' class='form-label'>Confirmar contraseña</label>
+        <span class="form-line"></span>
+      </div>
+      <div class="form-group">
+        <input type="file" id='image-users' required minlength="2" class="form-input" name="image-users" placeholder=" "/>
+        <label for='image-users' class='form-label'>Seleccionar Imagen</label>
         <span class="form-line"></span>
       </div>
       <input type="submit" class="form-submit" id="submit-register">
