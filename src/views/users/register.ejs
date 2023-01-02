@@ -6,41 +6,54 @@
 <section class="register-section">
   <form class="form-register" action="/register" method="post" enctype="multipart/form-data">
     <h2 class="form-title">Resgístrate</h2>
-    <% if(locals.errors) { %>
-      <% for (let oneError in errors) { %>
-        <p> <%= errors[oneError].msg %></p>
-      <% } %>
-  <% } %>
     <div class="form-container">
       <div class="form-group">
         <input type="text" id='name' class="form-input" name='name' placeholder=" "/>
         <label for="name" class="form-label">Nombre</label>
         <span class="form-line"></span>
+        <% if(locals.errors && errors.name) { %>
+          <p><%= errors.name.msg %></p>
+      <% } %>
       </div>
       <div class="form-group">
         <input type="text" id='apellido' class="form-input" name='apellido' placeholder=" "/>
         <label for="apellido" class="form-label">Apellido</label>
         <span class="form-line"></span>
+        <% if(locals.errors && errors.apellido) { %>
+          <p><%= errors.apellido.msg %></p>
+      <% } %>
       </div>
       <div class="form-group">
         <input type="email" id='email'  class="form-input" name="email" placeholder=" "/>
         <label for='email' class='form-label'>Email</label>
         <span class="form-line"></span>
+        <% if(locals.errors && errors.apellido) { %>
+          <p><%= errors.email.msg %></p>
+      <% } %>
       </div>
       <div class="form-group">
         <input type="password" id='password' class="form-input" name="password" placeholder=" "/>
         <label for='password' class='form-label'>Contraseña:</label>
         <span class="form-line"></span>
+        <% if(locals.errors && errors.password) { %>
+          <p><%= errors.password.msg %></p>
+      <% } %>
       </div>
       <div class="form-group">
         <input type="password" id='confirm_password' class="form-input" name="confirm_password" placeholder=" "/>
         <label for='confirm_password' class='form-label'>Confirmar contraseña</label>
         <span class="form-line"></span>
+        <% if(locals.errors && errors.confirm_password) { %>
+          <p><%= errors.confirm_password.msg %></p>
+      <% } %>
       </div>
       <div class="form-group">
-        <input type="file" id='image-users' class="form-input" name="image-users" placeholder=" "/>
-        <label for='image-users' class='form-label'>Seleccionar Imagen</label>
+        <input type="file" id='imageusers' class="form-input" name="imageusers" placeholder=" "/>
+        <label for='imageusers' class='form-label'>Seleccionar Imagen</label>
         <span class="form-line"></span>
+        <% if(locals.errors && errors.imageusers) { %>
+          <p><%= errors.imageusers.msg %></p>
+      <% } %>    
       </div>
       <input type="submit" class="form-submit" id="submit-register">
       <input type="reset" class="form-submit" id="reset-register">

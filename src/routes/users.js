@@ -88,7 +88,7 @@ const validacionesRegistro = [
       }
     })
     .withMessage("Las contraseñas deben ser iguales"),
-  body("image-users")
+  body("imageusers")
     .custom((value, { req }) => {
       if (req.file != undefined) {
         return true;
@@ -106,7 +106,7 @@ router.post("/login", validacionesLogin, usersController.ingresar);
 router.get("/register", usersController.register);
 router.post(
   "/register",
-  upload.single("image-users"),
+  upload.single("imageusers"),
   validacionesRegistro,
   usersController.processRegister
 );
