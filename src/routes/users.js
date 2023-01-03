@@ -5,7 +5,6 @@ const path = require("path");
 const multer = require("multer");
 const bcrypt = require("bcryptjs");
 const fs = require("fs");
-const authMiddleware = require ('../middlewares/authMiddleware')
 
 // ************ express-validator ************
 const { body } = require("express-validator");

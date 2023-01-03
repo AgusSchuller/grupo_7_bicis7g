@@ -6,5 +6,13 @@
   "email": "lolistover@gmail.com",
   "password": "$2a$10$JHER3DFco0mNNYL1IaaeReTQyE21pBcxFw/H41fINy.L5v8B8UJvm",
   "imagen": "users-1672715656730.jpeg"
+ },
+ {
+  "id": 2,
+  "nombre": "juan ",
+  "apellido": "perez",
+  "email": "jperez@gmail.com",
+  "password": "$2a$10$9ezePf0tqqhc7jDQdcH5juKp6uwNzbiN8033krM/S1hsopU0kd5oi",
+  "imagen": "users-1672755398560.jpeg"
  }
 ]

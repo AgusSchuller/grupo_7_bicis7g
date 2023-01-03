@@ -6,8 +6,6 @@ var salt = bcrypt.genSaltSync(10);
 const usersFilePath = path.join(__dirname, "../database/users.json");
 const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 
-const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-
 const { validationResult } = require("express-validator");
 
 const usersController = {
@@ -15,40 +13,18 @@ const usersController = {
     res.render("./users/login");
   },
   proccesLogin: (req, res) => {
-    let errors = validationResult(req);
-    if (errors.isEmpty()) {
-      let usersJSON = fs.readFileSync("users.json", { encoding: "utf-8" });
-      let users;
-      if (usersJSON == "") {
-        users = [];
-      } else {
-        users = JSON.parse(usersJSON);
+    const errors = validationResult(req);
+    if(errors.isEmpty()){
+      let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/users.json')));
+      let usuarioLogueado = archivoUsuarios.find(usuario => usuario.email == req.body.email)
+      delete usuarioLogueado.password;
+      req.session.usuario = usuarioLogueado;  
+      if(req.body.recordarme){
+        res.cookie('email',usuarioLogueado.email,{maxAge: 1000 * 60 * 60 * 24})
       }
-      let usuarioALoguearse
-
-      for (let i = 0; i < users.length; i++) {
-        if (users[i].email == req.body.email) {
-          if (bcrypt.compareSync(req.body.password, users[i].password)) {
-            let usuarioALoguearse = users[i];
-            break;
-          }
-        }
-      }
-      if (usuarioALoguearse == undefined) {
-        return res.render("./users/login", {
-          errors: [{ msg: "Credenciales invalidas" }],
-        });
-      }
-      req.session.usuarioLogueado = usuarioALoguearse;
-      if (req.body.recordame!= undefined){
-        res.cookie('recordame', usuarioALoguearse.email, {maxAge: 1000 * 60 * 60 * 24})
-      }
-      return res.render("./users/login")
-    } else {
-      return res.render("./users/login", {
-        errors: errors.mapped(),
-        oldData: req.body,
-      });
+      return res.redirect('/');   
+    }else{
+      res.render(path.resolve(__dirname, '../views/users/login'),{errors:errors.mapped(),old:req.body});        
     }
   },
   register: (req, res) => {
@@ -75,7 +51,11 @@ const usersController = {
       });
     }
   },
-  logout: (req, res) => {},
+  logout: (req, res) => {
+    req.session.destroy();
+    res.cookie('email',null,{maxAge: -1});
+    res.redirect('/')
+  },
 };
 
 module.exports = usersController;
