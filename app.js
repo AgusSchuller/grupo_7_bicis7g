@@ -1,7 +1,10 @@
 // ************ Require's ************
 const express = require("express");
 const path = require("path");
+const session = require('express-session');
+const cookies = require("cookie-parser");
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
+const cookieAuthMiddleware = require('./src/middlewares/cookieAuthMiddleware');
 
 // ************ express() ************
 const app = express();
@@ -15,6 +18,9 @@ app.use( express.static(publicPath) );
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(session({secret:'Secreto'}))
+app.use(cookies());
+app.use(cookieAuthMiddleware)
 
 // ************ Template Engine ************
 app.set("view engine", "ejs");
@@ -25,7 +31,8 @@ const rutasMain = require ("./src/routes/main");
 app.use("/", rutasMain);
 const rutasProd = require ("./src/routes/products")
 app.use(rutasProd)
-const rutasUsers= require ("./src/routes/users")
+const rutasUsers= require ("./src/routes/users");
+const cookieParser = require("cookie-parser");
 app.use(rutasUsers)
 
 // ************ error handler ************

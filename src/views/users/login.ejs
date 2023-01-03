@@ -11,14 +11,22 @@
         <div class="form-group">
           <input type="email" id='email' class="form-input" name="email" placeholder=" "/>
           <label for="email" class="form-label">Email</label>
+          <% if(locals.errors && errors.email) { %>
+            <p><%= errors.email.msg %></p>
+        <% } %>
           <span class="form-line"></span>
         </div>
         <div class="form-group">
-          <input type="text" id='password' class="form-input" name="password" placeholder=" "/>
+          <input type="password" id='password' class="form-input" name="password" placeholder=" "/>
           <label for='password' class='form-label'>Contraseña</label>
+          <% if(locals.errors && errors.password) { %>
+            <p><%= errors.password.msg %></p>
+        <% } %>
           <span class="form-line"></span>
         </div>
+      <div><p class="form-paragraph" >Recordarme<input type='checkbox' name='recordame' ></p></div>
         <input type='submit' class="form-submit" value="Entrar">
+
       </div>
 </section>      
 <!--FOOTER -->

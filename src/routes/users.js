@@ -5,6 +5,7 @@ const path = require("path");
 const multer = require("multer");
 const bcrypt = require("bcryptjs");
 const fs = require("fs");
+const authMiddleware = require ('../middlewares/authMiddleware')
 
 // ************ express-validator ************
 const { body } = require("express-validator");
@@ -43,7 +44,7 @@ const validacionesLogin = [
       }
       return false;
     })
-    .withMessage("Usuario no regitrado"),
+    .withMessage("Usuario no registrado"),
   body("password")
     .custom((value, { req }) => {
       for (let i = 0; i < archivoUsuarios.length; i++) {
@@ -100,7 +101,7 @@ const validacionesRegistro = [
 
 /*** LOGIN ***/
 router.get("/login", usersController.login);
-router.post("/login", validacionesLogin, usersController.ingresar);
+router.post("/login", validacionesLogin, usersController.proccesLogin);
 
 /*** REGISTER ***/
 router.get("/register", usersController.register);

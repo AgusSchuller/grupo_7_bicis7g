@@ -1,18 +1,10 @@
 [
-    {
-      "id": 1,
-      "nombre": "Bicicleta porp ekano",
-      "apellido": "Bici para divertirse en la ciudad",
-      "email": "Porp",
-      "password": "Categoria1",
-      "imagen": "ebike-porp-ekano-3.jpg"
-    },
-    {
-      "id": 1,
-      "nombre": "Bicicleta porp ekano",
-      "apellido": "Bici para divertirse en la ciudad",
-      "email": "Porp",
-      "password": "Categoria1",
-      "imagen": "ebike-porp-ekano-3.jpg"
-    }
-  ]
+ {
+  "id": 1,
+  "nombre": "Dolores",
+  "apellido": "Stover",
+  "email": "lolistover@gmail.com",
+  "password": "$2a$10$JHER3DFco0mNNYL1IaaeReTQyE21pBcxFw/H41fINy.L5v8B8UJvm",
+  "imagen": "users-1672715656730.jpeg"
+ }
+]
