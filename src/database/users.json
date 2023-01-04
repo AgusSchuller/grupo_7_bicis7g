@@ -14,5 +14,13 @@
   "email": "jperez@gmail.com",
   "password": "$2a$10$9ezePf0tqqhc7jDQdcH5juKp6uwNzbiN8033krM/S1hsopU0kd5oi",
   "imagen": "users-1672755398560.jpeg"
+ },
+ {
+  "id": 3,
+  "nombre": "Agustin",
+  "apellido": "Schuller",
+  "email": "agustin.schuller@gmail.com",
+  "password": "$2a$10$UM5ePYNi8446WbHqrApEgeKSdArVHvmT4APagHxgF97rqimd/1Mx.",
+  "imagen": "users-1672795020326.png"
  }
 ]
