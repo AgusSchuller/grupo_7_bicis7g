@@ -42,5 +42,5 @@ app.use((req, res, next)=>{
 
 /************* INICIANDO EL SERVIDOR **************/
 app.listen(3000, ()=>{
-    console.log("Servidor funcionando");
+    console.log("Servidor funcionando en localhost:3000");
 });
