@@ -4,22 +4,27 @@ module.exports = (sequelize, dataTypes) => {
     id: {
       type: dataTypes.INTEGER,
       primaryKey: true,
+      allowNull: false,
       autoIncrement: true,
     },
     nombre: {
       type: dataTypes.STRING,
+      allowNull: false,
     },
     apellido: {
       type: dataTypes.STRING,
+      allowNull: false,
     },
     email: {
-      // type:
+      type: dataTypes.STRING,
+      allowNull: false,
     },
     password: {
-      /// type:
+      type: dataTypes.STRING,
+      allowNull: false,
     },
     imagen: {
-      // type:
+      allowNull: false,
     },
   };
   let config = {
@@ -27,6 +32,17 @@ module.exports = (sequelize, dataTypes) => {
     timeStamps: false,
   };
   const user = sequelize.define(alias, cols, config);
+
+  //luego de define asociar con otras tablas:
+  // user.associate = function (models){
+  //user.belongsToMany(models.user, {
+    //as: "users",
+    //trough: "users",
+    //foreingKey: "users_id",
+    //timestamps: false, 
+    //otherKey: "",
+  //})
+  //}
 
   return user;
 };
