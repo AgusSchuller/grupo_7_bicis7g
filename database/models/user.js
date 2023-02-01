@@ -24,14 +24,14 @@ module.exports = (sequelize, dataTypes) => {
       allowNull: false,
     },
     imagen: {
-      allowNull: false,
+      type: dataTypes.STRING,
     },
-  };
+  }/*
   let config = {
     tableName: "users",
     timeStamps: false,
-  };
-  const user = sequelize.define(alias, cols, config);
+  };*/
+  const user = sequelize.define(alias, cols);
 
   //luego de define asociar con otras tablas:
   // user.associate = function (models){

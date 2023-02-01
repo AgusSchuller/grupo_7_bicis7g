@@ -5,34 +5,40 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
+      allowNull : false
     },
-    nombre: {
+    name: {
+      type: dataTypes.STRING,
+      allowNull: false,
+    },
+    description: {
       type: dataTypes.STRING,
     },
-    descripcion: {
-      type: dataTypes.STRING,
+    price: {
+      type: dataTypes.DECIMAL,
     },
-    precio: {
+    discount: {
       type: dataTypes.INTEGER,
     },
-    descuento: {
-      type: dataTypes.INTEGER,
-    },
-    talla: {
-      // type:
-    },
-    color: {
+    image: {
       type: dataTypes.STRING,
     },
-    img: {
-      //type:
+    brandId: {
+      type: dataTypes.INTEGER
     },
-  };
+    modelId: {
+      type: dataTypes.INTEGER
+    },
+    sizeId:  {
+      type: dataTypes.INTEGER
+    }
+  }
+  /*
   let config = {
     tableName: "products",
     timeStamps: false,
-  };
-  const product = sequelize.define(alias, cols, config);
+  };*/
+  const product = sequelize.define(alias, cols);
 
   return product;
 };
