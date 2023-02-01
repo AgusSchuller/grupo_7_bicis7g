@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-  let alias = "users";
+  let alias = "User";
   let cols = {
     id: {
       type: dataTypes.INTEGER,
@@ -28,10 +28,10 @@ module.exports = (sequelize, dataTypes) => {
     },
   }/*
   let config = {
-    tableName: "users",
+    tableName: "",
     timeStamps: false,
   };*/
-  const user = sequelize.define(alias, cols);
+  const User = sequelize.define(alias, cols);
 
   //luego de define asociar con otras tablas:
   // user.associate = function (models){
@@ -44,5 +44,5 @@ module.exports = (sequelize, dataTypes) => {
   //})
   //}
 
-  return user;
+  return User;
 };
