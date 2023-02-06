@@ -22,10 +22,11 @@
         </li>
         <li>
           <% if(locals.usuario) { %>  
-              <a href="/logout"><%= usuario.nombre %><i class="fas fa-sign-out-alt"></i>Cerrar sesión    </a>
+              <a href="/logout"><%= usuario.nombre %><i class="fas fa-sign-out-alt"></i><br>Cerrar sesión</a>
            
           <% } else { %>  
               <a href="/login"><i class="fas fa-sign-in-alt"></i>Iniciar Sesion</a>
+              <br>
               <a href="/register">Registrarse</i></a>
           <%}%>  
         </li>

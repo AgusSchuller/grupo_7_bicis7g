@@ -42,6 +42,7 @@ main section h1 {
   padding: 15px 60px;
 }
 
+
 /*--------------MAIN BIENVENIDA------------*/
 .bienvenida {
   position: relative;
@@ -225,7 +226,9 @@ main section .producto:hover {
   width: 70%;
   margin: 20px;
 }
-.cart-section-item-title{}
+.cart-section-item-title{
+  margin: auto;
+}
 
 .cart-container{
   display: flex;
@@ -238,7 +241,10 @@ main section .producto:hover {
   max-width:100%;
   height: auto
 }
-.cart-container-resume{}
+.cart-container-resume{
+  margin: auto;
+
+}
 
 .cart-container-product{
   width: 80%;
