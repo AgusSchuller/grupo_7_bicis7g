@@ -1,10 +1,7 @@
 const path = require('path');
 const fs = require('fs');
-
-const productsFilePath = path.join(__dirname, '../database/products.json');
-const bicis = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+const db = require('../database/models');
+const Product = db.Product;
 
 module.exports = {
     index: (req,res) =>{

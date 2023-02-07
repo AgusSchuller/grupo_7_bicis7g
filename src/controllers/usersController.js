@@ -3,10 +3,12 @@ const fs = require("fs");
 var bcrypt = require("bcryptjs");
 var salt = bcrypt.genSaltSync(10);
 
-const usersFilePath = path.join(__dirname, "../database/users.json");
-const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-
 const { validationResult } = require("express-validator");
+
+//Aquí requiero la Base  de Datos.
+const db = require('../database/models/');
+//Aquí hago la asociación al módelo correspondiente
+const User = db.User;
 
 const usersController = {
   login: (req, res) => {
