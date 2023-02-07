@@ -25,8 +25,9 @@ module.exports = (sequelize, dataTypes) => {
     },
     imagen: {
       type: dataTypes.STRING,
+      allowNull: false,
     },
-  }/*
+  }; /*
   let config = {
     tableName: "",
     timeStamps: false,
@@ -36,11 +37,11 @@ module.exports = (sequelize, dataTypes) => {
   //luego de define asociar con otras tablas:
   // user.associate = function (models){
   //user.belongsToMany(models.user, {
-    //as: "users",
-    //trough: "users",
-    //foreingKey: "users_id",
-    //timestamps: false, 
-    //otherKey: "",
+  //as: "users",
+  //trough: "users",
+  //foreingKey: "users_id",
+  //timestamps: false,
+  //otherKey: "",
   //})
   //}
 

@@ -5,7 +5,7 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
-      allowNull : false
+      allowNull: false,
     },
     name: {
       type: dataTypes.STRING,
@@ -24,22 +24,26 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.STRING,
     },
     brandId: {
-      type: dataTypes.INTEGER
+      type: dataTypes.INTEGER,
     },
     modelId: {
-      type: dataTypes.INTEGER
+      type: dataTypes.INTEGER,
     },
-    sizeId:  {
-      type: dataTypes.INTEGER
-    }
-  }
+    sizeId: {
+      type: dataTypes.INTEGER,
+    },
+  };
   /*
   let config = {
     tableName: "",
     timeStamps: false,
   };*/
   const Product = sequelize.define(alias, cols);
-
-
+  Product.associate = function (models) {
+    Product.belongsTo(models.ProductModel, {
+      as: "productModel",
+      foreignKey: "ProductId",
+    });
+  };
   return Product;
 };
