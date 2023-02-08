@@ -11,7 +11,7 @@ module.exports = {
             include : [{association : 'model'}]
         })   
         .then(bicis =>{
-            //return res.send(relojes);
+            //return res.send(bicis);
             res.render(path.resolve(__dirname, '..', 'views', 'products', 'listado'),{bicis});
         })
         .catch(error => res.send(error))

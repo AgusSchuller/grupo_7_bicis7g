@@ -6,22 +6,22 @@
   <!--DETALLE DEL PRODUCTO-->
   <section class="detail-section">
     <div class="detail-container-image">
-      <img src=<%= miBici.img%> />
+      <img src='/img/<%= miBici.img%'> />
     </div>
     <div class="detail-container-description">
-      <h2 class="detail-container-product"><%= miBici.nombre%></h2>
+      <h2 class="detail-container-product"><%= miBici.name%></h2>
       <h3 class="detail-container-price">
-        <%= miBici.precio %>
-        <span class="detail-container-price-discount"><%= miBici.descuento%></span>
+        <%= miBici.price %>
+        <span class="detail-container-price-discount"><%= miBici.discount%></span>
       </h3>
       <div class="detail-container-specification">
         <p class="detail-container-specification-pargraph">
-          <%= miBici.descripcion %>
+          <%= miBici.description %>
         </p>
       </div>
       <form action="">
         <div class="detail-container-options">
-          <select
+         <!-- <select
             class="detail-container-options-color"
             name="color"
             id="color"
@@ -29,12 +29,12 @@
             <option value="selectColor">Seleccionar Color</option>
             <option value="color1"><%= miBici.color%></option>
       
-          </select>
+          </select>-->
           <select class="detail-container-options-size" name="size" id="size">
             <option value="selectSize">Seleccionar Talla</option>
-            <option value="size1">S</option>
-            <option value="size2">M</option>
-            <option value="size3">L</option>
+            <option value="size1">1</option>
+            <option value="size2">2</option>
+            <option value="size3">3</option>
           </select>
         </div>
         <div class="detail-container-buy">
