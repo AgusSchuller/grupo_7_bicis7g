@@ -12,9 +12,9 @@ const { body } = require("express-validator");
 // ************ Controller Require ************
 const usersController = require("../controllers/usersController");
 
-let archivoUsuarios = JSON.parse(
-  fs.readFileSync(path.resolve(__dirname, "../database/users.json"))
-);
+//let archivoUsuarios = JSON.parse(
+ // fs.readFileSync(path.resolve(__dirname, "../database/users.json"))
+//);
 
 //********** MULTER ********** */
 var storage = multer.diskStorage({

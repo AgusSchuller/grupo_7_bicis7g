@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/users.json')));
-        
+
 module.exports = (req,res,next) =>{
     res.locals.usuario = false;
     if(req.session.usuario){

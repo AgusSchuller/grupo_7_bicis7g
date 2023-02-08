@@ -23,13 +23,7 @@ module.exports = (sequelize, dataTypes) => {
     image: {
       type: dataTypes.STRING,
     },
-    brandId: {
-      type: dataTypes.INTEGER,
-    },
     modelId: {
-      type: dataTypes.INTEGER,
-    },
-    sizeId: {
       type: dataTypes.INTEGER,
     },
   };
@@ -40,10 +34,11 @@ module.exports = (sequelize, dataTypes) => {
   };*/
   const Product = sequelize.define(alias, cols);
   Product.associate = function (models) {
-    Product.belongsTo(models.ProductModel, {
-      as: "productModel", /* el nombre de aca, es con el cual nosotros vamos a hacer el include de esa asociacion*/
-      foreignKey: "ProductId",
+    Product.belongsTo(models.Model, {
+      as: "model", /* el nombre de aca, es con el cual nosotros vamos a hacer el include de esa asociacion*/
+      foreignKey: "modelId",
     });
   };
+ 
   return Product;
 };

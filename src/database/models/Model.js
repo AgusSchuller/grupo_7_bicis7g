@@ -22,9 +22,9 @@ module.exports = (sequelize, dataTypes) => {
     };*/
   const Model = sequelize.define(alias, cols);
   Model.associate = function (models) {
-    Model.belongsTo(models.ProductModel, {
-      as: "productModel",
-      foreignKey: "modelId",
+    Model.belongsTo(models.Product, {
+      as: "product",
+      foreignKey: "id",
     });
   };
   return Model;

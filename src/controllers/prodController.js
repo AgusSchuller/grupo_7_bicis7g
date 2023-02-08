@@ -2,10 +2,19 @@ const path = require('path');
 const fs = require('fs');
 const db = require('../database/models');
 const Product = db.Product;
+const Model = db.Model;
+const Op = db.Sequelize.Op;
 
 module.exports = {
     index: (req,res) =>{
-        res.render(path.resolve(__dirname, '../views/products/listado'), {bicis, toThousand});
+        Product.findAll({
+            include : [{association : 'model'}]
+        })   
+        .then(bicis =>{
+            //return res.send(relojes);
+            res.render(path.resolve(__dirname, '..', 'views', 'products', 'listado'),{bicis});
+        })
+        .catch(error => res.send(error))
     },
     show: (req,res) =>{
         let miBici;
