@@ -19,7 +19,7 @@ CREATE TABLE `products` (
 
 
 insert into products value (1,'Bicicleta porp ekano', 'Diseñada como una máquina de trail XC de alto rendimiento',100000.00, 15 ,
-'ebike-porp-ekano-1.jpg',1, 1,'0000-00-00 00:00:00',NULL, NULL);
+'ebike-poly-bromo-1.jpg',1, 1,'0000-00-00 00:00:00',NULL, NULL);
 
 
 CREATE TABLE `users` (
