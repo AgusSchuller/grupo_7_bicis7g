@@ -50,6 +50,9 @@ CREATE TABLE `models` (
   
 insert into models value (1,'MTB', '2021-09-21 12:00:38','2021-09-28 12:09:22', null);
 insert into models value (2,'Urban', '2021-09-21 12:00:38','2021-09-28 12:09:22', null);
+insert into models value (3,'BMX', '2021-09-21 12:00:38','2021-09-28 12:09:22', null);
+insert into models value (4,'Ruta', '2021-09-21 12:00:38','2021-09-28 12:09:22', null);
+insert into models value (5,'Kids', '2021-09-21 12:00:38','2021-09-28 12:09:22', null);
 
 CREATE TABLE `sizes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -60,6 +63,7 @@ CREATE TABLE `sizes` (
   PRIMARY KEY (`id`)
   );
   
-insert into sizes value (1,'Small', '2021-09-21 12:00:38','2021-09-28 12:09:22', null);
-insert into sizes value (2,'Medium', '2021-09-21 12:00:38','2021-09-28 12:09:22', null);
-insert into sizes value (2,'Large', '2021-09-21 12:00:38','2021-09-28 12:09:22', null);
+
+insert into sizes value (1,'Small',null,null,null);
+insert into sizes value (2,'Medium',null,null,null);
+insert into sizes value (3,'Large',null,null,null);

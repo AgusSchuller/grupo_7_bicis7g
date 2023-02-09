@@ -29,12 +29,7 @@
           <span class="form-line"></span>
         </div>
         <div class="form-group">
-          <input type="text" id='modelo' class="form-input" name="modelo" placeholder=" "/>
-          <label for='modelo' class='form-label'>Modelo</label>
-          <span class="form-line"></span>
-        </div>
-        <div class="form-group">
-          <select name="categoria" id="categoria" class="custom-select">
+          <select name="modelo" id="modelo" class="custom-select">
             <option value="#" selected disabled>Seleccione su modelo...</option>
             <% modelos.forEach(model => { %>
               <option value="<%=model.id %>"><%=model.name %></option>
@@ -42,8 +37,8 @@
           </select>
         </div>
         <div class="form-group">              
-        <input type="text" id='talle' class="form-input" name="talle" placeholder=" "/>
-          <label for='talle' class='form-label'>Talle</label>
+        <input type="text" id='talla' class="form-input" name="talla" placeholder=" "/>
+          <label for='talle' class='form-label'>Talla</label>
           <span class="form-line"></span>
         </div>
         <input type="file" name="imagen" >

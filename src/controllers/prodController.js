@@ -7,14 +7,14 @@ const Op = db.Sequelize.Op;
 
 module.exports = {
   index: (req, res) => {
-    Product.findAll({
-      include: [{ association: "model" }],
+   Product.findAll({
+      include: [{ association: "model" }], 
     })
-      .then((bicis) => {
+    .then((bicis) => {
         //return res.send(bicis);
-        res.render(
-          path.resolve(__dirname, "..", "views", "products", "listado"),
-          { bicis }
+       res.render(
+        path.resolve(__dirname, "..", "views", "products", "listado"),
+         { bicis }
         );
       })
       .catch((error) => res.send(error));
@@ -51,6 +51,7 @@ module.exports = {
       discount: req.body.descuento,
       image: req.file.filename,
       modelId: req.body.model,
+      sizeId: req.body.size,
     };
     //return res.send(_body);
     Product.create(_body)

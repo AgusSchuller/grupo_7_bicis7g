@@ -10,10 +10,7 @@ module.exports = (sequelize, dataTypes) => {
     name: {
       type: dataTypes.STRING,
       allowNull: false,
-    },
-    size: {
-      type: dataTypes.INTEGER,
-    },
+    }
   };
   /*
     let config = {

@@ -26,6 +26,9 @@ module.exports = (sequelize, dataTypes) => {
     modelId: {
       type: dataTypes.INTEGER,
     },
+    sizeId: {
+      type: dataTypes.INTEGER,
+    },
   };
   /*
   let config = {
@@ -38,7 +41,10 @@ module.exports = (sequelize, dataTypes) => {
       as: "model" /* el nombre de aca, es con el cual nosotros vamos a hacer el include de esa asociacion*/,
       foreignKey: "modelId",
     });
+    Product.belongsTo(models.Size, {
+      as: "size",
+      foreignKey: "sizeId",
+    });
   };
-
   return Product;
 };
