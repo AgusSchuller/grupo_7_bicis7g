@@ -61,11 +61,16 @@ module.exports = {
       .catch((error) => res.send(error));
   },
   edit: (req, res) => {
-    const modoId = req.params.id;
-    let biciEditar = bicis.find((bici) => bici.id == modoId);
-    res.render(path.resolve(__dirname, "../views/products/editProd"), {
-      biciEditar,
-    });
+    const modelos = Model.findAll()
+    const productos= Product.findByPk(req.params.id,{
+        include : [{association : 'model'}]
+    })
+    Promise.all([productos, modelos])  
+    .then( ([biciEditar, modelos]) =>{
+        //return res.send(categorias);
+        res.render(path.resolve(__dirname, '..','views','products','editProd'), {biciEditar, modelos})
+    })  
+    .catch(error => res.send(error))        
   },
   update: (req, res) => {
     req.body.id = req.params.id;
