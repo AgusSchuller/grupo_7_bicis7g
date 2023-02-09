@@ -21,7 +21,8 @@ module.exports = (sequelize, dataTypes) => {
   Model.associate = function (models) {
     Model.belongsTo(models.Product, {
       as: "product",
-      foreignKey: "id",
+      foreignKey:'id',
+      sourceKey: 'modelId',
     });
   };
   return Model;

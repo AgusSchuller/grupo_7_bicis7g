@@ -50,8 +50,8 @@ module.exports = {
       price: req.body.precio,
       discount: req.body.descuento,
       image: req.file.filename,
-      modelId: req.body.model,
-      sizeId: req.body.size,
+      modelId: req.body.modelo,
+      sizeId: req.body.talla,
     };
     //return res.send(_body);
     Product.create(_body)
@@ -84,13 +84,12 @@ module.exports = {
     res.redirect("/products");
   },
   delete: (req, res) => {
-    const biciDeleteId = req.params.id;
-    const bicisFinal = bicis.filter((bici) => bici.id != biciDeleteId);
-    let bicisGuardar = JSON.stringify(bicisFinal, null, 2);
-    fs.writeFileSync(
-      path.resolve(__dirname, "../database/products.json"),
-      bicisGuardar
-    );
-    res.redirect("/products");
+    Product.destroy({
+      where: {
+          id : req.params.id
+      }
+  })
+  .then(()=>  res.redirect('/products'))
+  .catch(error => res.send(error))
   },
 };
