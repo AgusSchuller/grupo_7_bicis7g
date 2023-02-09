@@ -17,13 +17,13 @@ module.exports = {
         .catch(error => res.send(error))
     },
     show: (req,res) =>{
-        let miBici;
-        bicis.forEach(bici => {
-            if(bici.id == req.params.id){
-                miBici = bici;
-            }
-        });
-        res.render(path.resolve(__dirname, '../views/products/productDetail'), {miBici, toThousand})
+        Product.findByPk(req.params.id, {
+            include : [{association : 'model'}]
+        })  
+        .then(miBici =>{
+            res.render(path.resolve(__dirname, '..','views','products','productDetail'), {miBici})
+        })  
+        .catch(error => res.send(error))
     },
     create: (req,res) =>{   
         res.render(path.resolve(__dirname, '../views/products/newProd'));

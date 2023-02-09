@@ -6,13 +6,13 @@
   <!--DETALLE DEL PRODUCTO-->
   <section class="detail-section">
     <div class="detail-container-image">
-      <img src='/img/<%= miBici.img%'> />
+      <img src='/img/<%= miBici.image%>' />
     </div>
     <div class="detail-container-description">
       <h2 class="detail-container-product"><%= miBici.name%></h2>
       <h3 class="detail-container-price">
-        <%= miBici.price %>
-        <span class="detail-container-price-discount"><%= miBici.discount%></span>
+        $<%= miBici.price %>
+        <span class="detail-container-price-discount"><%= miBici.discount%>%</span>
       </h3>
       <div class="detail-container-specification">
         <p class="detail-container-specification-pargraph">
