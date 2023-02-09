@@ -6,13 +6,16 @@
   <!--DETALLE DEL PRODUCTO-->
   <section class="detail-section">
     <div class="detail-container-image">
-      <img src='/img/<%= miBici.image%>' />
+      <img src="/img/bicis/<%= miBici.image%>" />
     </div>
     <div class="detail-container-description">
       <h2 class="detail-container-product"><%= miBici.name%></h2>
+      <h2 class="detail-container-product"><%= miBici.model.name%></h2>
       <h3 class="detail-container-price">
         $<%= miBici.price %>
-        <span class="detail-container-price-discount"><%= miBici.discount%>%</span>
+        <span class="detail-container-price-discount"
+          ><%= miBici.discount%>%</span
+        >
       </h3>
       <div class="detail-container-specification">
         <p class="detail-container-specification-pargraph">
@@ -21,23 +24,15 @@
       </div>
       <form action="">
         <div class="detail-container-options">
-         <!-- <select
-            class="detail-container-options-color"
-            name="color"
-            id="color"
-          >
-            <option value="selectColor">Seleccionar Color</option>
-            <option value="color1"><%= miBici.color%></option>
-      
-          </select>-->
+        </div>
+        <div class="detail-container-buy">
           <select class="detail-container-options-size" name="size" id="size">
             <option value="selectSize">Seleccionar Talla</option>
             <option value="size1">1</option>
             <option value="size2">2</option>
             <option value="size3">3</option>
           </select>
-        </div>
-        <div class="detail-container-buy">
+          <br>
           <input
             class="detail-container-buy-quantity"
             type="number"
@@ -47,10 +42,9 @@
             max="3"
             value="1"
           />
-          <button class="detail-container-buy-add">Añadir al Carrito</button>
         </div>
+        <button class="detail-container-buy-add">Añadir al Carrito</button>
       </form>
-      <a href="/products" class="btn btn-danger">Volver</a>
     </div>
   </section>
   <!--FOOTER -->

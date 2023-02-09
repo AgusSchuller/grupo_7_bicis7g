@@ -1,39 +1,46 @@
 // ************ Require's ************
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const path = require('path');
-const multer = require('multer');
+const path = require("path");
+const multer = require("multer");
 
 // ************ Controller Require ************
-const prodController= require(path.resolve(__dirname,'../controllers/prodController'));
+const prodController = require(path.resolve(
+  __dirname,
+  "../controllers/prodController"
+));
 
 //********** MULTER ********** */
 var storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, path.resolve(__dirname, '..','..','public','img','bicis'));
-    },
-    filename: function (req, file, cb) {
-      cb(null, 'bici-'+Date.now()+path.extname(file.originalname))
-    }
-  })
-   
-  const upload = multer({ storage })
+  destination: function (req, file, cb) {
+    cb(null, path.resolve(__dirname, "..", "..", "public", "img", "bicis"));
+  },
+  filename: function (req, file, cb) {
+    cb(null, "bici-" + Date.now() + path.extname(file.originalname));
+  },
+});
 
-/*** GET ALL PRODUCTS ***/ 
-router.get('/products', prodController.index);
+const upload = multer({ storage });
 
-/*** GET ONE PRODUCT ***/ 
-router.get('/products/detail/:id', prodController.show);
+/*** GET ALL PRODUCTS ***/
+router.get("/products", prodController.index);
 
-/*** CREATE ONE PRODUCT ***/ 
-router.get('/products/create', prodController.create);
-router.post('/products/create', upload.single('imagen'), prodController.save);
+/*** GET ONE PRODUCT ***/
+router.get("/products/detail/:id", prodController.show);
 
-/*** EDIT ONE PRODUCT ***/ 
-router.get('/products/edit/:id', prodController.edit);
-router.put('/products/edit/:id', upload.single('imagen'), prodController.update);
+/*** CREATE ONE PRODUCT ***/
+router.get("/products/create", prodController.create);
+router.post("/products/create", upload.single("imagen"), prodController.save);
 
-/*** DELETE ONE PRODUCT***/ 
-router.get('/products/delete/:id', prodController.delete);
+/*** EDIT ONE PRODUCT ***/
+router.get("/products/edit/:id", prodController.edit);
+router.put(
+  "/products/edit/:id",
+  upload.single("imagen"),
+  prodController.update
+);
+
+/*** DELETE ONE PRODUCT***/
+router.get("/products/delete/:id", prodController.delete);
 
 module.exports = router;

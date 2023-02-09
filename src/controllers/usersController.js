@@ -6,7 +6,7 @@ var salt = bcrypt.genSaltSync(10);
 const { validationResult } = require("express-validator");
 
 //Aquí requiero la Base  de Datos.
-const db = require('../database/models/');
+const db = require("../database/models/");
 //Aquí hago la asociación al módelo correspondiente
 const User = db.User;
 
@@ -16,17 +16,26 @@ const usersController = {
   },
   proccesLogin: (req, res) => {
     const errors = validationResult(req);
-    if(errors.isEmpty()){
-      let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/users.json')));
-      let usuarioLogueado = archivoUsuarios.find(usuario => usuario.email == req.body.email)
+    if (errors.isEmpty()) {
+      let archivoUsuarios = JSON.parse(
+        fs.readFileSync(path.resolve(__dirname, "../database/users.json"))
+      );
+      let usuarioLogueado = archivoUsuarios.find(
+        (usuario) => usuario.email == req.body.email
+      );
       delete usuarioLogueado.password;
-      req.session.usuario = usuarioLogueado;  
-      if(req.body.recordarme){
-        res.cookie('email',usuarioLogueado.email,{maxAge: 1000 * 60 * 60 * 24})
+      req.session.usuario = usuarioLogueado;
+      if (req.body.recordarme) {
+        res.cookie("email", usuarioLogueado.email, {
+          maxAge: 1000 * 60 * 60 * 24,
+        });
       }
-      return res.redirect('/');   
-    }else{
-      res.render(path.resolve(__dirname, '../views/users/login'),{errors:errors.mapped(),old:req.body});        
+      return res.redirect("/");
+    } else {
+      res.render(path.resolve(__dirname, "../views/users/login"), {
+        errors: errors.mapped(),
+        old: req.body,
+      });
     }
   },
   register: (req, res) => {
@@ -55,8 +64,8 @@ const usersController = {
   },
   logout: (req, res) => {
     req.session.destroy();
-    res.cookie('email',null,{maxAge: -1});
-    res.redirect('/')
+    res.cookie("email", null, { maxAge: -1 });
+    res.redirect("/");
   },
 };
 

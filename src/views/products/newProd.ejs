@@ -19,18 +19,31 @@
           <span class="form-line"></span>
         </div>
         <div class="form-group">
-          <input type="text"  class="form-input" name="precio" placeholder=" "/>
+          <input type="text" id='precio' class="form-input" name="precio" placeholder=" "/>
           <label for='price' class='form-label'>Precio</label>
           <span class="form-line"></span>
         </div>
         <div class="form-group">
-          <input type="text"  class="form-input" name="descuento" placeholder=" "/>
+          <input type="text" id='descuento'  class="form-input" name="descuento" placeholder=" "/>
           <label for='derscuento' class='form-label'>Descuento</label>
           <span class="form-line"></span>
         </div>
+        <div class="form-group">
+          <input type="text" id='modelo' class="form-input" name="modelo" placeholder=" "/>
+          <label for='modelo' class='form-label'>Modelo</label>
+          <span class="form-line"></span>
+        </div>
+        <div class="form-group">
+          <select name="categoria" id="categoria" class="custom-select">
+            <option value="#" selected disabled>Seleccione su modelo...</option>
+            <% modelos.forEach(model => { %>
+              <option value="<%=model.id %>"><%=model.name %></option>
+            <% }); %>
+          </select>
+        </div>
         <div class="form-group">              
-        <input type="text" id='color'required minlength="3" class="form-input" name="color" placeholder=" "/>
-          <label for='color' class='form-label'>Color</label>
+        <input type="text" id='talle' class="form-input" name="talle" placeholder=" "/>
+          <label for='talle' class='form-label'>Talle</label>
           <span class="form-line"></span>
         </div>
         <input type="file" name="imagen" >

@@ -35,10 +35,10 @@ module.exports = (sequelize, dataTypes) => {
   const Product = sequelize.define(alias, cols);
   Product.associate = function (models) {
     Product.belongsTo(models.Model, {
-      as: "model", /* el nombre de aca, es con el cual nosotros vamos a hacer el include de esa asociacion*/
+      as: "model" /* el nombre de aca, es con el cual nosotros vamos a hacer el include de esa asociacion*/,
       foreignKey: "modelId",
     });
   };
- 
+
   return Product;
 };

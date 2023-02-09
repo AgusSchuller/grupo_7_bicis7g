@@ -9,6 +9,7 @@ CREATE TABLE `products` (
    `discount` int(11) DEFAULT NULL,
    `image` varchar(100) DEFAULT NULL,
    `modelId` int(11) DEFAULT NULL, 
+   `sizeId` int(11) DEFAULT NULL ,
    `createdAt` timestamp DEFAULT NULL,
    `updatedAt` timestamp DEFAULT NULL,
    `deletedAt` timestamp DEFAULT NULL,
@@ -17,10 +18,7 @@ CREATE TABLE `products` (
 
 
 insert into products value (1,'Bicicleta porp ekano', 'Diseñada como una máquina de trail XC de alto rendimiento',100000.00, 15 ,
-'ebike-poly-bromo-1.jpg',1, '0000-00-00 00:00:00',NULL, NULL);
-
-insert into products value (2,'Bicicleta poly bromo', 'Diseñada para pasear por la ciudad',90000.00,10,
-'ebike-porp-ekano-4.jpg',2, '0000-00-00 00:00:00','NULL', NULL);
+'ebike-poly-bromo-1.jpg',1, 1,'0000-00-00 00:00:00',NULL, NULL);
 
 
 CREATE TABLE `users` (
@@ -44,16 +42,24 @@ insert into users value (3,'Carlos', 'Perez','carlosperez@gmail.com','holahola',
 CREATE TABLE `models` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) DEFAULT NULL,
-  `size` varchar(100) DEFAULT NULL,
  `createdAt` timestamp DEFAULT NULL,
   `updatedAt` timestamp DEFAULT NULL,
  `deletedAt` timestamp DEFAULT NULL,
   PRIMARY KEY (`id`)
   );
   
-insert into models value (1,'MTB',1, '2021-09-21 12:00:38','2021-09-28 12:09:22');
-insert into models value (2,'MTB',2, '2021-09-21 12:00:38','2021-09-28 12:09:22');
-insert into models value (3,'MTB',3, '2021-09-21 12:00:38','2021-09-28 12:09:22');
-insert into models value (4,'Urban',1, '2021-09-21 12:00:38','2021-09-28 12:09:22');
-insert into models value (5,'Urban',2, '2021-09-21 12:00:38','2021-09-28 12:09:22');
-insert into models value (6,'Urban',3, '2021-09-21 12:00:38','2021-09-28 12:09:22');
+insert into models value (1,'MTB', '2021-09-21 12:00:38','2021-09-28 12:09:22', null);
+insert into models value (2,'Urban', '2021-09-21 12:00:38','2021-09-28 12:09:22', null);
+
+CREATE TABLE `sizes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) DEFAULT NULL,
+ `createdAt` timestamp DEFAULT NULL,
+  `updatedAt` timestamp DEFAULT NULL,
+ `deletedAt` timestamp DEFAULT NULL,
+  PRIMARY KEY (`id`)
+  );
+  
+insert into sizes value (1,'Small', '2021-09-21 12:00:38','2021-09-28 12:09:22', null);
+insert into sizes value (2,'Medium', '2021-09-21 12:00:38','2021-09-28 12:09:22', null);
+insert into sizes value (2,'Large', '2021-09-21 12:00:38','2021-09-28 12:09:22', null);

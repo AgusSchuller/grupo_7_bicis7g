@@ -194,24 +194,24 @@ main section .producto:hover {
   display: flex;
   align-items: flex-start;
 }
-.detail-container-options-color {
-  margin: 20px;
-}
 .detail-container-options-size {
-  margin: 20px;
+  margin: 15px;
+  font-size: 16px;
 }
 .detail-container-buy {
-  margin: 20px;
+  margin-bottom: 30px;
 }
 .detail-container-buy-quantity {
-  margin: 20px;
+  padding: 4px;
+  margin-left: 20px;
 }
 .detail-container-buy-add {
   background-color: black;
   color: white;
   border-radius: 15px;
   font-size: 20px;
-  padding: 19px;
+  padding: 14px;
+  margin-left: 20px;
   font-weight: bold;
 }
 
@@ -229,7 +229,6 @@ main section .producto:hover {
 .cart-section-item-title{
   margin: auto;
 }
-
 .cart-container{
   display: flex;
   align-items: flex-start;
@@ -243,9 +242,7 @@ main section .producto:hover {
 }
 .cart-container-resume{
   margin: auto;
-
 }
-
 .cart-container-product{
   width: 80%;
   color: black;
@@ -372,7 +369,6 @@ color: black;
   border: none;
   border-radius: .5em;
 }
-
 .not-found{
   width: 100%;
   max-width: 500px;
@@ -383,9 +379,11 @@ color: black;
 .not-found h1{
   padding-top: 20px;
 }
-
 .tituloAdministrador{
   padding: 20px;
+  background-color: rgb(213, 243, 233);
+  margin-left: 500px;
+  margin-right: 500px;
 }
 tr td{
   padding: 20px;
@@ -395,7 +393,7 @@ tr td a, article a {
   color: #222222;
 }
 .administrador{
-  margin-left: 600px;
+  margin-left: 550px;
   margin-top: 20px;
 }
 /*--------------MEDIA QUERIES--------------*/

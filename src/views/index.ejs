@@ -12,13 +12,14 @@
     <section class="busqueda">
       <h2>Productos destacados</h2>
       <article class="vamosabuscar">
-       
         <% bicis.forEach(bici => { %>
         <div class="producto">
-          <a href="/products/detail/<%= bici.id%>"><img src="/img/<%= bici.image%>" /></a>
+          <a href="/products/detail/<%= bici.id%>"
+            ><img src="/img/bicis/<%= bici.image%>"
+          /></a>
           <div class="detalle-producto">
-            <h4 class="precio"><%= bici.price%></h4>
-            <h4 class="descuentos"><%= bici.discount%></h4>
+            <h4 class="precio">$<%= bici.price%></h4>
+            <h4 class="descuentos">%<%= bici.discount%></h4>
             <h3><%= bici.name%></h3>
           </div>
         </div>
