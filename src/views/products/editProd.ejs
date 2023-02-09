@@ -19,16 +19,21 @@
             </div>
             <div class="form-group">
               <input type="text"  class="form-input" name="precio" placeholder=" " value="<%= biciEditar.price%>"/>
-              <label for='price' class='form-label'>Precio</label>
+              <label for='precio' class='form-label'>Precio</label>
               <span class="form-line"></span>
             </div>
             <div class="form-group">
               <input type="text" class="form-input" value="<%= biciEditar.discount%>" name="descuento" placeholder=" "/>
-              <label for='derscuento' class='form-label'>Descuento</label>
+              <label for='descuento' class='form-label'>Descuento</label>
+              <span class="form-line"></span>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-input" value="<%= biciEditar.model.name%>" name="model" placeholder=" "/>
+              <label for='model' class='form-label'>Modelo</label>
               <span class="form-line"></span>
             </div>
             <div class="form-group">              
-            <input type="text" id='color'required minlength="3" class="form-input" name="talla" placeholder=" "/>
+            <input type="text" id='color'  class="form-input" name="talla" placeholder=" "/>
               <label for='color' class='form-label'>Talla</label>
               <span class="form-line"></span>
             </div>

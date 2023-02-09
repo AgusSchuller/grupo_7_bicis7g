@@ -30,16 +30,19 @@
         </div>
         <div class="form-group">
           <select name="modelo" id="modelo" class="custom-select">
-            <option value="#" selected disabled>Seleccione su modelo...</option>
+            <option value="#" selected disabled>Seleccione su modelo</option>
             <% modelos.forEach(model => { %>
               <option value="<%=model.id %>"><%=model.name %></option>
             <% }); %>
           </select>
         </div>
-        <div class="form-group">              
-        <input type="text" id='talla' class="form-input" name="talla" placeholder=" "/>
-          <label for='talle' class='form-label'>Talla</label>
-          <span class="form-line"></span>
+        <div class="form-group">           
+          <select name="modelo" id="modelo" class="custom-select">
+            <option value="#" selected disabled>Seleccione su talla</option>
+            <% tallas.forEach(talla => { %>
+              <option value="<%=talla.id %>"><%=talla.name %></option>
+            <% }); %>
+          </select>      
         </div>
         <input type="file" name="imagen" >
         <input type="submit" class="form-submit" id="submit-register">
