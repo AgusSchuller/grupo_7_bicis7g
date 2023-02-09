@@ -7,14 +7,14 @@ const Op = db.Sequelize.Op;
 
 module.exports = {
   index: (req, res) => {
-   Product.findAll({
-      include: [{ association: "model" }], 
+    Product.findAll({
+      include: [{ association: "model" }],
     })
-    .then((bicis) => {
+      .then((bicis) => {
         //return res.send(bicis);
-       res.render(
-        path.resolve(__dirname, "..", "views", "products", "listado"),
-         { bicis }
+        res.render(
+          path.resolve(__dirname, "..", "views", "products", "listado"),
+          { bicis }
         );
       })
       .catch((error) => res.send(error));
@@ -61,16 +61,19 @@ module.exports = {
       .catch((error) => res.send(error));
   },
   edit: (req, res) => {
-    const modelos = Model.findAll()
-    const productos= Product.findByPk(req.params.id,{
-        include : [{association : 'model'}]
-    })
-    Promise.all([productos, modelos])  
-    .then( ([biciEditar, modelos]) =>{
+    const modelos = Model.findAll();
+    const productos = Product.findByPk(req.params.id, {
+      include: [{ association: "model" }],
+    });
+    Promise.all([productos, modelos])
+      .then(([biciEditar, modelos]) => {
         //return res.send(categorias);
-        res.render(path.resolve(__dirname, '..','views','products','editProd'), {biciEditar, modelos})
-    })  
-    .catch(error => res.send(error))        
+        res.render(
+          path.resolve(__dirname, "..", "views", "products", "editProd"),
+          { biciEditar, modelos }
+        );
+      })
+      .catch((error) => res.send(error));
   },
   update: (req, res) => {
     req.body.id = req.params.id;
@@ -91,10 +94,10 @@ module.exports = {
   delete: (req, res) => {
     Product.destroy({
       where: {
-          id : req.params.id
-      }
-  })
-  .then(()=>  res.redirect('/products'))
-  .catch(error => res.send(error))
+        id: req.params.id,
+      },
+    })
+      .then(() => res.redirect("/products"))
+      .catch((error) => res.send(error));
   },
 };
