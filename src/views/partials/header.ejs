@@ -22,7 +22,7 @@
         </li>
         <li>
           <% if(locals.usuario) { %>  
-              <a href="/logout"><%= usuario.nombre %><i class="fas fa-sign-out-alt"></i><br>Cerrar sesión</a>
+              <a href="/logout"><%= usuario.name %><i class="fas fa-sign-out-alt"></i><br>Cerrar sesión</a>
            
           <% } else { %>  
               <a href="/login"><i class="fas fa-sign-in-alt"></i>Iniciar Sesion</a>

@@ -36,9 +36,9 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`)
   );
   
-insert into users value (1,'Dolores','Stover', 'lolistover@gmail.com','holahola', 'avatar.jpg',1, '2021-09-21 12:00:38','2021-09-28 12:09:22', NULL);
-insert into users value (2,'Juan', 'Perez','juanperez@gmail.com','holahola','avatar.jpg',2, '2021-09-21 12:00:38','2021-09-28 12:09:22', NULL);
-insert into users value (3,'Carlos', 'Perez','carlosperez@gmail.com','holahola','avatar.jpg',3, '2021-09-21 12:00:38','2021-09-28 12:09:22', NULL);
+insert into users value (1,'Dolores','Stover', 'lolistover@gmail.com','holahola', 'avatar.jpg',9, '2021-09-21 12:00:38','2021-09-28 12:09:22', NULL);
+insert into users value (2,'Juan', 'Perez','juanperez@gmail.com','holahola','avatar.jpg',1, '2021-09-21 12:00:38','2021-09-28 12:09:22', NULL);
+insert into users value (3,'Carlos', 'Perez','carlosperez@gmail.com','holahola','avatar.jpg',1, '2021-09-21 12:00:38','2021-09-28 12:09:22', NULL);
 
 CREATE TABLE `models` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
