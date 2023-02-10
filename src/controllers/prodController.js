@@ -8,14 +8,14 @@ const Op = db.Sequelize.Op;
 
 module.exports = {
   index: (req, res) => {
-   Product.findAll({
-      include: [{ association: "model" }], 
+    Product.findAll({
+      include: [{ association: "model" }],
     })
-    .then((bicis) => {
+      .then((bicis) => {
         //return res.send(bicis);
-       res.render(
-        path.resolve(__dirname, "..", "views", "products", "listado"),
-         { bicis }
+        res.render(
+          path.resolve(__dirname, "..", "views", "products", "listado"),
+          { bicis }
         );
       })
       .catch((error) => res.send(error));
@@ -33,14 +33,13 @@ module.exports = {
       .catch((error) => res.send(error));
   },
   create: (req, res) => {
-    let modelos = Model.findAll()
-    let tallas = Size.findAll()
+    let modelos = Model.findAll();
+    let tallas = Size.findAll();
 
-    Promise.all([modelos, tallas])
-    .then(([modelos, tallas]) => {
+    Promise.all([modelos, tallas]).then(([modelos, tallas]) => {
       res.render(
         path.resolve(__dirname, "..", "views", "products", "newProd"),
-        { modelos,tallas }
+        { modelos, tallas }
       );
     });
     //res.render(path.resolve(__dirname, "../views/products/newProd"));
@@ -54,7 +53,7 @@ module.exports = {
       description: req.body.descripcion,
       price: req.body.precio,
       discount: req.body.descuento,
-      image: req.file.filename,
+      image: req.body.filename,
       modelId: req.body.modelo,
       sizeId: req.body.talla,
     };
@@ -66,41 +65,48 @@ module.exports = {
       .catch((error) => res.send(error));
   },
   edit: (req, res) => {
-    const modelos = Model.findAll()
-    const tallas = Size.findAll()
-    const productos= Product.findByPk(req.params.id,{
-        include : [{association : 'model'}],
-    })
-    Promise.all([productos, modelos, tallas])  
-    .then( ([biciEditar, modelos, tallas]) =>{
-        //return res.send(categorias);
-        res.render(path.resolve(__dirname, '..','views','products','editProd'), {biciEditar, modelos, tallas})
-    })  
-    .catch(error => res.send(error))        
+    const modelos = Model.findAll();
+    const tallas = Size.findAll();
+    const productos = Product.findByPk(req.params.id, {
+      include: [{ association: "model" }, { association: "size" }],
+    });
+    Promise.all([productos, modelos, tallas])
+      .then(([biciEditar, modelos, tallas]) => {
+        //return res.send(biciEditar);
+        res.render(
+          path.resolve(__dirname, "..", "views", "products", "editProd"),
+          { biciEditar, modelos, tallas }
+        );
+      })
+      .catch((error) => res.send(error));
   },
   update: (req, res) => {
-    req.body.id = req.params.id;
-    req.body.imagen = req.file ? req.file.filename : req.body.oldImagen;
-    let bicisUpdate = bicis.map((bici) => {
-      if (bici.id == req.body.id) {
-        return (bici = req.body);
+    Product.update(
+      {
+        name: req.body.nombre,
+        description: req.body.descripcion,
+        price: req.body.precio,
+        discount: req.body.descuento,
+        image: req.body.filename,
+        modelId: req.body.modelo,
+        sizeId: req.body.talla,
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
       }
-      return bici;
-    });
-    let biciActualizar = JSON.stringify(bicisUpdate, null, 2);
-    fs.writeFileSync(
-      path.resolve(__dirname, "../database/products.json"),
-      biciActualizar
-    );
-    res.redirect("/products");
+    )
+      .then(() => res.redirect("/products"))
+      .catch((error) => res.send(error));
   },
   delete: (req, res) => {
     Product.destroy({
       where: {
-          id : req.params.id
-      }
-  })
-  .then(()=>  res.redirect('/products'))
-  .catch(error => res.send(error))
+        id: req.params.id,
+      },
+    })
+      .then(() => res.redirect("/products"))
+      .catch((error) => res.send(error));
   },
 };

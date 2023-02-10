@@ -3,64 +3,85 @@ const fs = require("fs");
 var bcrypt = require("bcryptjs");
 var salt = bcrypt.genSaltSync(10);
 
-const { validationResult } = require("express-validator");
+const { check, validationResult, body } = require("express-validator");
 
-//Aquí requiero la Base  de Datos.
 const db = require("../database/models/");
-//Aquí hago la asociación al módelo correspondiente
 const User = db.User;
+const sequelize = db.sequelize;
 
 const usersController = {
   login: (req, res) => {
-    res.render("./users/login");
+    res.render(path.resolve(__dirname, "../views/users/login"));
   },
   proccesLogin: (req, res) => {
-    const errors = validationResult(req);
-    if (errors.isEmpty()) {
-      let archivoUsuarios = JSON.parse(
-        fs.readFileSync(path.resolve(__dirname, "../database/users.json"))
-      );
-      let usuarioLogueado = archivoUsuarios.find(
-        (usuario) => usuario.email == req.body.email
-      );
-      delete usuarioLogueado.password;
-      req.session.usuario = usuarioLogueado;
+    db.User.findAll().then((users) => {
+      //Aquí guardo los errores que vienen desde la ruta, valiendome del validationResult
+      let errors = validationResult(req);
+      let usuarioLogueado = [];
+      if (req.body.email != "" && req.body.password != "") {
+        usuarioLogueado = users.filter(function (user) {
+          return user.email === req.body.email;
+        });
+        //Aquí verifico si la clave que está colocando es la misma que está hasheada en la Base de datos - El compareSync retorna un true ó un false
+        if (
+          bcrypt.compareSync(req.body.password, usuarioLogueado[0].password) ===
+          false
+        ) {
+          usuarioLogueado = [];
+        }
+      }
+      //console.log(usuarioLogueado);
+      //return res.send(usuarioLogueado);
+
+      //Aquí determino si el usuario fue encontrado ó no en la Base de Datos
+      if (usuarioLogueado.length === 0) {
+        return res.render(path.resolve(__dirname, "../views/users/login"), {
+          errors: errors.mapped(),
+          old: req.body,
+        });
+      } else {
+        //Aquí guardo en SESSION al usuario logueado
+        req.session.usuario = usuarioLogueado[0];
+      }
+      //Aquí verifico si el usuario le dio click en el check box para recordar al usuario
       if (req.body.recordarme) {
-        res.cookie("email", usuarioLogueado.email, {
+        res.cookie("email", usuarioLogueado[0].email, {
           maxAge: 1000 * 60 * 60 * 24,
         });
       }
       return res.redirect("/");
-    } else {
-      res.render(path.resolve(__dirname, "../views/users/login"), {
+    });
+  },
+  register: (req, res) => {
+    res.render(path.resolve(__dirname, "../views/users/register"));
+  },
+  processRegister: (req, res) => {
+    let errors = validationResult(req);
+     //return res.send(errors);
+    //Aquí determino si hay ó no errores encontrados
+    if (!errors.isEmpty()) {
+      return res.render(path.resolve(__dirname, "../views/users/register"), {
         errors: errors.mapped(),
         old: req.body,
       });
     }
-  },
-  register: (req, res) => {
-    res.render("./users/register");
-  },
-  processRegister: (req, res) => {
-    let errors = validationResult(req);
-    if (errors.isEmpty()) {
-      let newUser = {
-        id: users[users.length - 1].id + 1,
-        nombre: req.body.name,
-        apellido: req.body.apellido,
-        email: req.body.email,
-        password: bcrypt.hashSync(req.body.password, salt),
-        imagen: req.file ? req.file.filename : "default-image.jpg",
-      };
-      users.push(newUser);
-      fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
-      res.redirect("/login");
-    } else {
-      return res.render("./users/register", {
-        errors: errors.mapped(),
-        oldData: req.body,
-      });
-    }
+    //Si todo marcha sobre ruedas, entonces
+    // Generamos el usuario a partir de los datos del request
+    // - Ignoramos repassword, ya que no nos interesa guardarla
+    // - Hasheamos la contraseña
+    let user = {
+      name: req.body.name,
+      lastName: req.body.lastName,
+      email: req.body.email,
+      password: bcrypt.hashSync(req.body.password, 10),
+      image: req.file ? req.file.filename : "",
+      role: 1,
+    };
+    User.create(user)
+      .then((storedUser) => {
+        return res.redirect("/login");
+      })
+      .catch((error) => console.log(error));
   },
   logout: (req, res) => {
     req.session.destroy();

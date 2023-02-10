@@ -16,11 +16,11 @@
       <% } %>
       </div>
       <div class="form-group">
-        <input type="text" id='apellido' value="<%= locals.oldData ? oldData.apellido : null %>" class="form-input" name='apellido' placeholder=" "/>
-        <label for="apellido" class="form-label">Apellido</label>
+        <input type="text" id='lastName' value="<%= locals.oldData ? oldData.lastName : null %>" class="form-input" name='lastName' placeholder=" "/>
+        <label for="lastName" class="form-label">Apellido</label>
         <span class="form-line"></span>
-        <% if(locals.errors && errors.apellido) { %>
-          <p><%= errors.apellido.msg %></p>
+        <% if(locals.errors && errors.lastName) { %>
+          <p><%= errors.lastName.msg %></p>
       <% } %>
       </div>
       <div class="form-group">

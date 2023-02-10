@@ -7,14 +7,10 @@ const bcrypt = require("bcryptjs");
 const fs = require("fs");
 
 // ************ express-validator ************
-const { body } = require("express-validator");
+const { check, validationResult, body } = require("express-validator");
 
 // ************ Controller Require ************
 const usersController = require("../controllers/usersController");
-
-//let archivoUsuarios = JSON.parse(
-// fs.readFileSync(path.resolve(__dirname, "../database/users.json"))
-//);
 
 //********** MULTER ********** */
 var storage = multer.diskStorage({
@@ -25,7 +21,6 @@ var storage = multer.diskStorage({
     cb(null, "users-" + Date.now() + path.extname(file.originalname));
   },
 });
-
 const upload = multer({ storage });
 
 //********** VALIDACIONES ********** */
@@ -65,7 +60,7 @@ const validacionesRegistro = [
       min: 1,
     })
     .withMessage("El campo Nombre no puede estar vacío"),
-  body("apellido")
+  body("lastName")
     .isLength({
       min: 1,
     })
