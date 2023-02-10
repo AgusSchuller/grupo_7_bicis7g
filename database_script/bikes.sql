@@ -6,11 +6,11 @@ CREATE TABLE `products` (
   `name` varchar(100) NOT NULL,
   `description` VARCHAR(1000) NOT NULL,
   `price` decimal(12,2) DEFAULT NULL,
-   `discount` int(11) DEFAULT NULL,
-   `image` varchar(100) DEFAULT NULL,
-   `modelId` int(11) DEFAULT NULL, 
-   `sizeId` int(11) DEFAULT NULL ,
-`createdAt` timestamp NULL DEFAULT NULL,
+  `discount` int(11) DEFAULT NULL,
+  `image` varchar(100) DEFAULT NULL,
+  `modelId` int(11) DEFAULT NULL, 
+  `sizeId` int(11) DEFAULT NULL ,
+  `createdAt` timestamp NULL DEFAULT NULL,
   `updatedAt` timestamp NULL DEFAULT NULL,
   `deletedAt` timestamp NULL DEFAULT NULL,
 
@@ -30,7 +30,7 @@ CREATE TABLE `users` (
   `password` varchar(100) DEFAULT NULL,
   `image` varchar(100) DEFAULT NULL,
   `role` int(11) DEFAULT NULL,
-`createdAt` timestamp NULL DEFAULT NULL,
+  `createdAt` timestamp NULL DEFAULT NULL,
   `updatedAt` timestamp NULL DEFAULT NULL,
   `deletedAt` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -43,7 +43,7 @@ insert into users value (3,'Carlos', 'Perez','carlosperez@gmail.com','holahola',
 CREATE TABLE `models` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) DEFAULT NULL,
-`createdAt` timestamp NULL DEFAULT NULL,
+  `createdAt` timestamp NULL DEFAULT NULL,
   `updatedAt` timestamp NULL DEFAULT NULL,
   `deletedAt` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -57,7 +57,7 @@ insert into models value (3,'Trail', '2021-09-21 12:00:38','2021-09-28 12:09:22'
 CREATE TABLE `sizes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) DEFAULT NULL,
-`createdAt` timestamp NULL DEFAULT NULL,
+  `createdAt` timestamp NULL DEFAULT NULL,
   `updatedAt` timestamp NULL DEFAULT NULL,
   `deletedAt` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
