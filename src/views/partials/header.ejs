@@ -7,7 +7,9 @@
         <li><a href="#">BICICLETAS</a></li>
         <li><a href="#">ACCESORIOS</a></li>
         <li><a href="#">SERVICIOS</a></li> 
+          <% if(locals.usuario.role===9) { %>
         <li><a href="/products">ADMINISTRAR</a></li> 
+        <%}%>        
       </ul>
     </nav>
     <nav Class="right-navbar">
