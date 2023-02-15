@@ -65,6 +65,8 @@ const usersController = {
         old: req.body,
       });
     }
+//HACER: VALIDACION DE QUE EL MAIL NO ESTE REGISTRADO EN LA BASE DE DATOS
+
     //Si todo marcha sobre ruedas, entonces
     // Generamos el usuario a partir de los datos del request
     // - Ignoramos repassword, ya que no nos interesa guardarla
