@@ -8,14 +8,20 @@
           <h2 class="form-title">Formulario de Modificación de Productos</h2>
           <div class="form-container">
             <div class="form-group">
-              <input type="text"  required minlength="2" value="<%= biciEditar.name%>" class="form-input" name='nombre' placeholder=" " />
+              <input type="text" value="<%= biciEditar.name%>" class="form-input" name='nombreProducto' placeholder=" " />
               <label for="nombreProducto" class="form-label">Nombre del Producto</label>
               <span class="form-line"></span>
+              <% if(locals.errors && errors.nombreProducto) { %>
+                <p><%= errors.nombreProducto.msg %></p>
+            <% } %>
             </div>
             <div class="form-group">
-              <input type="text"  required minlength="2" value="<%= biciEditar.description%>" class="form-input" name="descripcion" placeholder=" "/>
-              <label for="description" class="form-label">Descripción</label>
+              <input type="text" value="<%= biciEditar.description%>" class="form-input" name="descripcion" placeholder=" "/>
+              <label for="descripcion" class="form-label">Descripción</label>
               <span class="form-line"></span>
+              <% if(locals.errors && errors.descripcion) { %>
+                <p><%= errors.descripcion.msg %></p>
+            <% } %>
             </div>
             <div class="form-group">
               <input type="text"  class="form-input" name="precio" placeholder=" " value="<%= biciEditar.price%>"/>

@@ -15,14 +15,14 @@ const usersController = {
   },
   proccesLogin: (req, res) => {
     db.User.findAll().then((users) => {
-      //Aquí guardo los errores que vienen desde la ruta, valiendome del validationResult
+      //guardo los errores que vienen desde la ruta, valiendome del validationResult
       let errors = validationResult(req);
       let usuarioLogueado = [];
       if (req.body.email != "" && req.body.password != "") {
         usuarioLogueado = users.filter(function (user) {
           return user.email === req.body.email;
         });
-        //Aquí verifico si la clave que está colocando es la misma que está hasheada en la Base de datos - El compareSync retorna un true ó un false
+        //verifico si la clave que está colocando es la misma que está hasheada en la Base de datos - El compareSync retorna un true ó un false
         if (
           bcrypt.compareSync(req.body.password, usuarioLogueado[0].password) ===
           false
@@ -33,17 +33,17 @@ const usersController = {
       //console.log(usuarioLogueado);
       //return res.send(usuarioLogueado);
 
-      //Aquí determino si el usuario fue encontrado ó no en la Base de Datos
+      //determino si el usuario fue encontrado ó no en la Base de Datos
       if (usuarioLogueado.length === 0) {
         return res.render(path.resolve(__dirname, "../views/users/login"), {
           errors: errors.mapped(),
           old: req.body,
         });
       } else {
-        //Aquí guardo en SESSION al usuario logueado
+        //guardo en SESSION al usuario logueado
         req.session.usuario = usuarioLogueado[0];
       }
-      //Aquí verifico si el usuario le dio click en el check box para recordar al usuario
+      //verifico si el usuario le dio click en el check box para recordar al usuario
       if (req.body.recordarme) {
         res.cookie("email", usuarioLogueado[0].email, {
           maxAge: 1000 * 60 * 60 * 24,
@@ -57,20 +57,14 @@ const usersController = {
   },
   processRegister: (req, res) => {
     let errors = validationResult(req);
-     //return res.send(errors);
-    //Aquí determino si hay ó no errores encontrados
+    //return res.send(errors);
+    //determino si hay ó no errores encontrados
     if (!errors.isEmpty()) {
       return res.render(path.resolve(__dirname, "../views/users/register"), {
         errors: errors.mapped(),
         old: req.body,
       });
     }
-//HACER: VALIDACION DE QUE EL MAIL NO ESTE REGISTRADO EN LA BASE DE DATOS
-
-    //Si todo marcha sobre ruedas, entonces
-    // Generamos el usuario a partir de los datos del request
-    // - Ignoramos repassword, ya que no nos interesa guardarla
-    // - Hasheamos la contraseña
     let user = {
       name: req.body.name,
       lastName: req.body.lastName,

@@ -33,15 +33,28 @@ const validacionesCreate = [
     .isLength({
       min: 5,
     })
-    .withMessage("El campo Nombre debe tener al menos cinco caracteres"),
+    .withMessage("El Nombre debe tener al menos cinco caracteres"),
   body("descripcion")
     .isLength({
       min: 20,
     })
-    .withMessage("El campo Nombre debe tener al menos veinte caracteres"),
+    .withMessage("La descripcion debe tener al menos veinte caracteres"),
 ];
 
-const validacionesEdit = [];
+const validacionesEdit = [
+  body("nombreProducto")
+  .notEmpty()
+  .withMessage("Debes completar el nombre")
+  .isLength({
+    min: 5,
+  })
+  .withMessage("El Nombre debe tener al menos cinco caracteres"),
+body("descripcion")
+  .isLength({
+    min: 20,
+  })
+  .withMessage("La descripcion debe tener al menos veinte caracteres"),  
+];
 
 /*** GET ALL PRODUCTS ***/
 router.get("/products", prodController.index);

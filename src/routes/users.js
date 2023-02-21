@@ -67,12 +67,12 @@ const validacionesRegistro = [
     .isLength({
       min: 2,
     })
-    .withMessage("El campo Nombre debe tener al menos dos caracteres"),
+    .withMessage("El Nombre debe tener al menos dos caracteres"),
   body("lastName")
     .isLength({
       min: 2,
     })
-    .withMessage("El campo Apellido no puede estar vacío"),
+    .withMessage("El Apellido no puede estar vacío"),
   body("email")
     .notEmpty()
     .withMessage("Debes completar el email")
