@@ -25,8 +25,14 @@ const upload = multer({ storage });
 
 //********** VALIDACIONES ********** */
 const validacionesLogin = [
-  body("email").isEmail().withMessage("Agregar un email válido"),
+  body("email")
+    .notEmpty()
+    .withMessage("Debes completar el email")
+    .isEmail()
+    .withMessage("Agregar un email válido"),
   body("password")
+    .notEmpty()
+    .withMessage("Debes completar la contraseña")
     .isLength({ min: 6 })
     .withMessage("La contraseña debe tener un mínimo de 6 caractéres"),
   body("email")
@@ -56,16 +62,22 @@ const validacionesLogin = [
 
 const validacionesRegistro = [
   body("name")
+    .notEmpty()
+    .withMessage("Debes completar el nombre")
     .isLength({
-      min: 1,
+      min: 2,
     })
-    .withMessage("El campo Nombre no puede estar vacío"),
+    .withMessage("El campo Nombre debe tener al menos dos caracteres"),
   body("lastName")
     .isLength({
-      min: 1,
+      min: 2,
     })
     .withMessage("El campo Apellido no puede estar vacío"),
-  body("email").isEmail().withMessage("Debe ingresar un email válido"),
+  body("email")
+    .notEmpty()
+    .withMessage("Debes completar el email")
+    .isEmail()
+    .withMessage("Debe ingresar un email válido"),
   body("password")
     .isLength({ min: 6 })
     .withMessage("La contraseña debe tener un mínimo de 6 caractéres"),
@@ -90,7 +102,11 @@ const validacionesRegistro = [
       }
       return false;
     })
-    .withMessage("Debe seleccionar una imagen"),
+    .withMessage("Debe seleccionar una imagen")
+    .custom((value, { req }) => {
+      if (!req.file) throw new Error("Profile Img is required");
+      return true;
+    }),
 ];
 
 /*** LOGIN ***/
