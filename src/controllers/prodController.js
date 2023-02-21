@@ -1,5 +1,8 @@
 const path = require("path");
 const fs = require("fs");
+
+const { check, validationResult, body } = require("express-validator");
+
 const db = require("../database/models");
 const Product = db.Product;
 const Model = db.Model;
@@ -45,6 +48,7 @@ module.exports = {
     //res.render(path.resolve(__dirname, "../views/products/newProd"));
   },
   save: (req, res) => {
+    let errors = validationResult(req)
     //req.body.image = req.file.filename;
     //return res.send(req.body);
     const _body = {
@@ -58,11 +62,18 @@ module.exports = {
       sizeId: req.body.talla,
     };
     //return res.send(_body);
-    Product.create(_body)
+    if (errors.isEmpty()){
+      Product.create(_body)
       .then((bici) => {
         res.redirect("/products");
       })
       .catch((error) => res.send(error));
+    }else{
+      return res.render(path.resolve(__dirname, "../views/products/newProd"), {
+        errors: errors.mapped(),
+        old: req.body,
+      });
+    }
   },
   edit: (req, res) => {
     const modelos = Model.findAll();
