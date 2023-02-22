@@ -23,10 +23,12 @@ window.onload = function () {
       descripcion.classList.add("is-valid");
     }
 
-    var isValid = /[\/.](gif|jpg|jpeg|tiff|png)$/i.test(imagen.value);
-    if(!isValid) {
+    var isValidImg = /[\/.](gif|jpg|jpeg|tiff|png)$/i.test(imagen.value);
+    if(!isValidImg) {
       alert("Deberá ser un archivo válido (JPG, JPEG, PNG, GIF)");
     };
+
+    
 
     if (errores.length > 0) { 
       evento.preventDefault();
