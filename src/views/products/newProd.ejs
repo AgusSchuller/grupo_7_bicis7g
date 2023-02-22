@@ -5,11 +5,12 @@
   <%- include("../partials/header") %>
   <!--CONTENIDO PRINCIPAL -->
   <section class="edit-section">
+    <ul class="errores"></ul>
     <form class="form-edit" action="/products/create" method="POST" enctype="multipart/form-data">
       <h2 class="form-title">Formulario de Alta de Productos</h2>
       <div class="form-container">
         <div class="form-group">
-          <input type="text" class="form-input" name='nombreProducto' placeholder=" "/>
+          <input type="text" class="form-input" id='nombreProducto' name='nombreProducto' placeholder=" "/>
           <label for="nombreProducto" class="form-label">Nombre del Producto</label>
           <span class="form-line"></span>
           <% if(locals.errors && errors.nombreProducto) { %>
@@ -17,7 +18,7 @@
         <% } %>
         </div>
         <div class="form-group">
-          <input type="text" class="form-input" name="descripcion" placeholder=" "/>
+          <input type="text" class="form-input" id="descripcion"  name="descripcion" placeholder=" "/>
           <label for="descripcion" class="form-label">Descripción</label>
           <span class="form-line"></span>
           <% if(locals.errors && errors.descripcion) { %>
@@ -50,7 +51,7 @@
             <% }); %>
           </select>      
         </div>
-        <input type="file" name="imagen" >
+        <input type="file" id="imagen"  name="imagen" >
         <input type="submit" class="form-submit" id="submit-register">
         <input type="reset" class="form-submit" id="reset-register">
       </div>
