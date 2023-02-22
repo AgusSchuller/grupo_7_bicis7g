@@ -25,7 +25,7 @@ window.onload = function () {
         errores.push("El campo email no puede estar vacio");
         email.classList.add("is-invalid");
       }else if (!regEmail.test(email.value)){ 
-        errores.push('El email es inválido...');
+        errores.push('El formato de email es inválido...');
         email.classList.add('is-invalid');       
       }else{
         email.classList.add('is-valid');
@@ -45,7 +45,7 @@ window.onload = function () {
         };*/
 
         if (password.value == "") {
-          errores.push("El campo password no puede estar vacio");
+          errores.push("Debes introducir una contraseña");
           password.classList.add("is-invalid");
         } else {
           password.classList.remove("is-invalid");
@@ -53,6 +53,7 @@ window.onload = function () {
         }
 
         //Aquí enviamos los errores al usuario
+
         if (errores.length > 0) { 
           evento.preventDefault();
           let ulErrores = document.querySelector(".errores");
@@ -62,7 +63,7 @@ window.onload = function () {
             ulErrores.innerHTML += `<li>${errores[i]} </li>`;
           }
         } else {
-          alert("Validaciones exitosas!!!");
+          //alert("Validaciones exitosas!!!");
           form.submit();
         } 
     }

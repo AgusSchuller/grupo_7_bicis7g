@@ -6,6 +6,8 @@
 <section class="register-section">
   <form class="form-register" action="/register" method="post" enctype="multipart/form-data">
     <h2 class="form-title">Resgístrate</h2>
+    <ul class="errores" type="none"></ul>
+      <br/>
     <div class="form-container">
       <div class="form-group">
         <input type="text" id='name' value="<%= locals.oldData ? oldData.name : null %>" class="form-input" name='name' placeholder=" "/>
@@ -24,7 +26,7 @@
       <% } %>
       </div>
       <div class="form-group">
-        <input type="email" id='email' value="<%= locals.oldData ? oldData.email : null %>" class="form-input" name="email" placeholder=" "/>
+        <input  id='email' value="<%= locals.oldData ? oldData.email : null %>" class="form-input" name="email" placeholder=" "/>
         <label for='email' class='form-label'>Email</label>
         <span class="form-line"></span>
         <% if(locals.errors && errors.email) { %>
@@ -49,7 +51,7 @@
       </div>
       <div class="form-group">
         <input type="file" id='imageusers' class="form-input" name="imageusers" placeholder=" "/>
-        <label for='imageusers' class='form-label'>Seleccionar Imagen</label>
+        <label for='imageusers' class='form-label'>Seleccionar Imagen de Perfil</label>
         <span class="form-line"></span>
         <% if(locals.errors && errors.imageusers) { %>
           <p><%= errors.imageusers.msg %></p>
@@ -59,5 +61,6 @@
       <input type="reset" class="form-submit" id="reset-register">
     </div>
 </section>
+<script src="/js/regValidation.js"></script>
 <!--FOOTER -->
 <%- include("../partials/footer") %>
