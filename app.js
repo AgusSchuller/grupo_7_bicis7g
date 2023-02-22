@@ -22,6 +22,7 @@ app.use(session({secret:'Secreto'}))
 app.use(cookies());
 app.use(cookieAuthMiddleware)
 
+
 // ************ Template Engine ************
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "./src/views"));

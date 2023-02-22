@@ -3,6 +3,7 @@ const path = require('path');
 
 module.exports = (req,res,next) =>{
     res.locals.usuario = false;
+    console.log(req.session.usuario);
     if(req.session.usuario){
         res.locals.usuario = req.session.usuario;
         return next();

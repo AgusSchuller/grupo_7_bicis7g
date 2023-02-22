@@ -5,9 +5,10 @@
   <%- include("../partials/header") %>
   <!--CONTENIDO PRINCIPAL -->
   <section class="edit-section">
-    <ul class="errores"></ul>
+    
     <form class="form-edit" action="/products/create" method="POST" enctype="multipart/form-data">
       <h2 class="form-title">Formulario de Alta de Productos</h2>
+      <ul class="errores" type="none"></ul>
       <div class="form-container">
         <div class="form-group">
           <input type="text" class="form-input" id='nombreProducto' name='nombreProducto' placeholder=" "/>
@@ -56,5 +57,6 @@
         <input type="reset" class="form-submit" id="reset-register">
       </div>
 </section>
+<script src="/js/productValidation.js"></script>
   <!--FOOTER -->
   <%- include("../partials/footer") %>

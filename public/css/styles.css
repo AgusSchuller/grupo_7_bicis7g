@@ -405,6 +405,7 @@ tr td a, article a {
   background-color: #F8D7DA;
   text-align: center;
   border-radius: 10px;
+  text-decoration: none;
 }
 /*--------------MEDIA QUERIES--------------*/
 @media (min-width: 480px) {

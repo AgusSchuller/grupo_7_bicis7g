@@ -6,6 +6,7 @@
 <section class="login-section">
     <form class="form-login" action="/login" method="post" >
       <h2 class="form-title">Inicia Sesión</h2>
+      <ul class="errores" type="none"></ul>
       <p class="form-paragraph">¿Aún no tienes una cuenta?<a href="/register" class="form-link">Entra aquí</a></p>
       <div class="form-container">
         <div class="form-group">
@@ -28,6 +29,7 @@
         <input type='submit' class="form-submit" value="Entrar">
 
       </div>
-</section>      
+</section>     
+<script src="/js/loginValidation.js"></script> 
 <!--FOOTER -->
 <%- include("../partials/footer") %>
