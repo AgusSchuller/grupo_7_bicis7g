@@ -30,11 +30,20 @@ app.set("views", path.join(__dirname, "./src/views"));
 // ************ Route System require and use() ************
 const rutasMain = require ("./src/routes/main");
 app.use("/", rutasMain);
+
 const rutasProd = require ("./src/routes/products")
 app.use(rutasProd)
+
 const rutasUsers= require ("./src/routes/users");
-const cookieParser = require("cookie-parser");
 app.use(rutasUsers)
+
+const usersApi = require('./src/routes/apis/usersApi')
+app.use('/api/users',usersApi);
+
+const productsApi = require('./src/routes/apis/productsApi')
+app.use('/api/products',productsApi);
+
+const cookieParser = require("cookie-parser");
 
 // ************ error handler ************
 app.use((req, res, next)=>{
