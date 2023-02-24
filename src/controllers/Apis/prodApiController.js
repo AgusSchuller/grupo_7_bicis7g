@@ -7,28 +7,31 @@ const Model = db.Model;
 const Product = db.Product;
 
 const prodApiController = {
-  list: (req, res) => {
-    Product.findAll({
-      include: [{ association: "model" }, { association: "size" }],
-    }).then((products) => {
-      //console.log(products)
-      let respuesta = {
+  list: async (req, res) => {
+    try {
+      let productsApi = await Product.findAll({
+        include: ["model", "size"],
+        attributes: ["id", "name", "description"],
+      });
+      let products = productsApi.map((product) => {
+        //por cada elemento del array productsApi se le agrega la propiedad urlDetail
+        return {
+          ...product.dataValues,
+          urlDetail: `http://localhost:3000/api/products/${product.id}`,
+        };
+      });
+      res.json({
         meta: {
           status: 200,
-          total: products.length,
-          url: "api/products",
+          count: products.length,
         },
         data: {
-          id: products[0].id,
-          Nombre: products[0].name,
-          Descripcion: products[0].description,
-          Modelo:  products[0].model.name,
-          Talla:  products[0].size.name,
-          Url: 'localhost:3000/products'
+          products,
         },
-      };
-      res.json(respuesta);
-    });
+      });
+    } catch (err) {
+      console.log(err);
+    }
   },
 
   detail: (req, res) => {
@@ -52,9 +55,9 @@ const prodApiController = {
             id: product.dataValues.id,
             Nombre: product.dataValues.name,
             Descripcion: product.dataValues.description,
-            Modelo:  product.dataValues.model.name,
-            Talla:  product.dataValues.size.name,
-            Url: `localhost:3000/products/${product.dataValues.id}`
+            Modelo: product.dataValues.model.name,
+            Talla: product.dataValues.size.name,
+            Url: `localhost:3000/products/${product.dataValues.id}`,
           },
         };
         return res.json(respuesta);
