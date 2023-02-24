@@ -11,13 +11,21 @@ const prodApiController = {
     Product.findAll({
       include: [{ association: "model" }, { association: "size" }],
     }).then((products) => {
+      //console.log(products)
       let respuesta = {
         meta: {
           status: 200,
           total: products.length,
           url: "api/products",
         },
-        data: products,
+        data: {
+          id: products[0].id,
+          Nombre: products[0].name,
+          Descripcion: products[0].description,
+          Modelo:  products[0].model.name,
+          Talla:  products[0].size.name,
+          Url: 'localhost:3000/products'
+        },
       };
       res.json(respuesta);
     });
@@ -27,7 +35,13 @@ const prodApiController = {
     Product.findByPk(req.params.id, {
       include: [{ association: "model" }, { association: "size" }],
     }).then((product) => {
-      if (req.params.id == product.data.id) {
+      //console.log(product)
+      //console.log(product?.data?.id )
+      //console.log(req.params.id)
+      if (
+        product?.dataValues?.id !== null &&
+        product?.dataValues?.id == req.params.id
+      ) {
         let respuesta = {
           meta: {
             status: 200,
@@ -36,9 +50,9 @@ const prodApiController = {
           },
           data: product,
         };
-        res.json(respuesta);
+        return res.json(respuesta);
       }
-      return res.json("No existe el producto");
+      return res.status(200).json("No existe el producto");
     });
   },
 };
