@@ -48,7 +48,14 @@ const prodApiController = {
             total: product.length,
             url: "/api/products/:id",
           },
-          data: product,
+          data: {
+            id: product.dataValues.id,
+            Nombre: product.dataValues.name,
+            Descripcion: product.dataValues.description,
+            Modelo:  product.dataValues.model.name,
+            Talla:  product.dataValues.size.name,
+            Url: `localhost:3000/products/${product.dataValues.id}`
+          },
         };
         return res.json(respuesta);
       }
