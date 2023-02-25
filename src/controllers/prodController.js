@@ -53,7 +53,7 @@ module.exports = {
     //return res.send(req.body);
     const _body = {
       //return res.send(_body);
-      name: req.body.nombre,
+      name: req.body.nombreProducto,
       description: req.body.descripcion,
       price: req.body.precio,
       discount: req.body.descuento,
