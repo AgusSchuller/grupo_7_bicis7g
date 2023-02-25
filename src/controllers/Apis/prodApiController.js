@@ -55,8 +55,8 @@ const prodApiController = {
             id: product.dataValues.id,
             Nombre: product.dataValues.name,
             Descripcion: product.dataValues.description,
-            Modelo: product.dataValues.model.name,
-            Talla: product.dataValues.size.name,
+            Modelo: product.dataValues.model,
+            Talla: product.dataValues.size,
             Url: `localhost:3000/products/${product.dataValues.id}`,
           },
         };
