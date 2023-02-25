@@ -22,8 +22,21 @@ var storage = multer.diskStorage({
     cb(null, "bici-" + Date.now() + path.extname(file.originalname));
   },
 });
-
-const upload = multer({ storage });
+const upload = multer({
+  storage,
+  fileFilter: (req, file, cb) => {
+    fileLocal = file;
+    if (
+      file.mimetype == "image/png" ||
+      file.mimetype == "image/jpg" ||
+      file.mimetype == "image/jpeg"
+    ) {
+      cb(null, true);
+    } else {
+      cb(null, false);
+    }
+  },
+});
 
 //********** VALIDACIONES ********** */
 const validacionesCreate = [
@@ -39,21 +52,53 @@ const validacionesCreate = [
       min: 20,
     })
     .withMessage("La descripcion debe tener al menos veinte caracteres"),
+  body("imagen").custom(async (value, { req }) => {
+    let file = fileLocal;
+    let acceptedExtensions = [".jpg", ".jpeg", ".png", ".gif"];
+    if (!file) {
+      throw new Error("Tienes que subir una imagen");
+    } else {
+      let fileExtension = path.extname(file.originalname);
+      if (!acceptedExtensions.includes(fileExtension)) {
+        throw new Error(
+          "Las extensiones de archivo permitidas son ${acceptedExtensions.join(",
+          ")}"
+        );
+      }
+    }
+    return true;
+  }),
 ];
 
 const validacionesEdit = [
   body("nombreProducto")
-  .notEmpty()
-  .withMessage("Debes completar el nombre")
-  .isLength({
-    min: 5,
-  })
-  .withMessage("El Nombre debe tener al menos cinco caracteres"),
-body("descripcion")
-  .isLength({
-    min: 20,
-  })
-  .withMessage("La descripcion debe tener al menos veinte caracteres"),  
+    .notEmpty()
+    .withMessage("Debes completar el nombre")
+    .isLength({
+      min: 5,
+    })
+    .withMessage("El Nombre debe tener al menos cinco caracteres"),
+  body("descripcion")
+    .isLength({
+      min: 20,
+    })
+    .withMessage("La descripcion debe tener al menos veinte caracteres"),
+  body("imagen").custom(async (value, { req }) => {
+    let file = fileLocal;
+    let acceptedExtensions = [".jpg", ".jpeg", ".png", ".gif"];
+    if (!file) {
+      throw new Error("Tienes que subir una imagen");
+    } else {
+      let fileExtension = path.extname(file.originalname);
+      if (!acceptedExtensions.includes(fileExtension)) {
+        throw new Error(
+          "Las extensiones de archivo permitidas son ${acceptedExtensions.join(",
+          ")}"
+        );
+      }
+    }
+    return true;
+  }),
 ];
 
 /*** GET ALL PRODUCTS ***/
