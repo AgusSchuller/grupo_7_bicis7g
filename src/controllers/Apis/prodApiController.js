@@ -18,6 +18,7 @@ const prodApiController = {
         return {
           ...product.dataValues,
           urlDetail: `http://localhost:3000/api/products/${product.id}`,
+          image:`http://localhost:3000/images/products/${product.image}`,
         };
       });
       res.json({
