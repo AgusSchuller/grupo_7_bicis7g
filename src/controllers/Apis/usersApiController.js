@@ -15,6 +15,7 @@ const usersApiController = {
         return {
           ...user.dataValues,
           urlDetail: `http://localhost:3000/api/users/${user.iduser}`,
+          image:`http://localhost:3000/images/users/${user.image}`,
         };
       });
       res.json({
