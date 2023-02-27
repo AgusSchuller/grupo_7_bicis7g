@@ -6,6 +6,7 @@ const cookies = require("cookie-parser");
 const methodOverride = require("method-override"); // Pasar poder usar los métodos PUT y DELETE
 const cookieAuthMiddleware = require("./src/middlewares/cookieAuthMiddleware");
 const cors = require("cors");
+const bodyParser = require("body-parser");
 
 // ************ express() ************
 const app = express();
@@ -16,10 +17,12 @@ const publicPath = path.resolve(__dirname, "./public");
 app.use(express.static(publicPath));
 
 // ************ Middlewares ************
-app.use(methodOverride("_method")); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 app.use(express.urlencoded({ extended: false }));
+app.use(methodOverride("_method")); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 app.use(express.json());
-app.use(session({ secret: "Secreto" }));
+app.use(
+  session({ secret: "Secreto", resave: false, saveUninitialized: false })
+);
 app.use(cookies());
 app.use(cookieAuthMiddleware);
 
@@ -27,7 +30,6 @@ app.use(cookieAuthMiddleware);
 var corsOptions = {
   origin: "*",
 };
-
 app.use(cors(corsOptions));
 let allowCrossDomain = function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -40,12 +42,8 @@ let allowCrossDomain = function (req, res, next) {
   next();
 };
 app.use(allowCrossDomain);
-const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
-//URL encode  - Para que nos pueda llegar la información desde el formulario al req.body
-app.use(express.urlencoded({ extended: false }));
 
 // ************ Template Engine ************
 app.set("view engine", "ejs");
