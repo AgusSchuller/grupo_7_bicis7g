@@ -45,11 +45,11 @@ module.exports = {
         { modelos, tallas }
       );
     });
-    //res.render(path.resolve(__dirname, "../views/products/newProd"));
+   // res.render(path.resolve(__dirname, "../views/products/newProd"));
   },
   save: (req, res) => {
     let errors = validationResult(req);
-    //req.body.image = req.file.filename;
+    req.body.image = req.file.filename;
     return res.send(req.body);
     const _body = {
       //return res.send(_body);
@@ -61,7 +61,7 @@ module.exports = {
       modelId: req.body.modelo,
       sizeId: req.body.talla,
     };
-    //return res.send(_body);
+    return res.send(_body);
     if (errors.isEmpty()) {
       Product.create(_body)
         .then((bici) => {

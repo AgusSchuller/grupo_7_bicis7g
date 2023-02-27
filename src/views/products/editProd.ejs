@@ -25,26 +25,26 @@
             <% } %>
             </div>
             <div class="form-group">
-              <input type="text"  class="form-input" name="precio" placeholder=" " value="<%= biciEditar.price%>"/>
+              <input type="text"  class="form-input" id="precio" name="precio" placeholder=" " value="<%= biciEditar.price%>"/>
               <label for='precio' class='form-label'>Precio</label>
               <span class="form-line"></span>
             </div>
             <div class="form-group">
-              <input type="text" class="form-input" value="<%= biciEditar.discount%>" name="descuento" placeholder=" "/>
+              <input type="text" class="form-input" id="descuento" value="<%= biciEditar.discount%>" name="descuento" placeholder=" "/>
               <label for='descuento' class='form-label'>Descuento</label>
               <span class="form-line"></span>
             </div>
             <div class="form-group">
-              <input type="text" class="form-input" value="<%= biciEditar.model.name%>" name="model" placeholder=" "/>
+              <input type="text" class="form-input" id="modelo" value="<%= biciEditar.model.name%>" name="model" placeholder=" "/>
               <label for='model' class='form-label'>Modelo</label>
               <span class="form-line"></span>
             </div>
             <div class="form-group">              
-            <input type="text" id='color' value="<%= biciEditar.size.name%>" class="form-input" name="talla" placeholder=" "/>
+            <input type="text" id='talla' value="<%= biciEditar.size.name%>" class="form-input" name="talla" placeholder=" "/>
               <label for='color' class='form-label'>Talla</label>
               <span class="form-line"></span>
             </div>
-            <input type="file" name="imagen" >
+            <input type="file" name="imagen" id="imagen" >
             <input type="submit" class="form-submit" id="submit-register">
             <input type="reset" class="form-submit" id="reset-register">
           </div>

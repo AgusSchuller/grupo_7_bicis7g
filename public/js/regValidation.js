@@ -23,13 +23,15 @@ window.onload = function () {
 
       //Validamos nombre:
 
-      let regName = /^[a-z ,.'-]+$/i;
+      let regName = /^[a-z ,.'-]{2,}$/i;
 
       if (name.value == "") {
         errores.push("El campo nombre no puede estar vacio");
         name.classList.add("is-invalid");
       } else if (!regName.test(name.value)) {
-        errores.push("El formato de nombre es inválido...");
+        errores.push(
+          "El formato de nombre debe tener mínimo 2 caracteres y sin números"
+        );
         name.classList.add("is-invalid");
       } else {
         name.classList.add("is-valid");
@@ -38,13 +40,15 @@ window.onload = function () {
 
       //Validamos apellido:
 
-      let regLastName = /^[a-z ,.'-]+$/i;
+      let regLastName = /^[a-z ,.'-]{2,}$/i;
 
       if (lastName.value == "") {
         errores.push("El campo apellido no puede estar vacio");
         lastName.classList.add("is-invalid");
       } else if (!regName.test(lastName.value)) {
-        errores.push("El formato de apellido es inválido...");
+        errores.push(
+          "El formato de apellido debe tener mínimo 2 caracteres y sin números"
+        );
         lastName.classList.add("is-invalid");
       } else {
         lastName.classList.add("is-valid");
