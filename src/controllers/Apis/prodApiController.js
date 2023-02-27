@@ -42,6 +42,8 @@ const prodApiController = {
       //console.log(product)
       //console.log(product?.data?.id )
       //console.log(req.params.id)
+      //console.log(product.dataValues)
+
       if (
         product?.dataValues?.id !== null &&
         product?.dataValues?.id == req.params.id
@@ -58,6 +60,7 @@ const prodApiController = {
             Descripcion: product.dataValues.description,
             Modelo: product.dataValues.model,
             Talla: product.dataValues.size,
+            Imagen: product.dataValues.image,
             Url: `localhost:3000/products/${product.dataValues.id}`,
           },
         };

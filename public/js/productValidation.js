@@ -36,13 +36,10 @@ window.onload = function () {
 
     //Validamos campo de descripción:
 
-    let regDescription = /(\s*?[\w\.]\s*?){20,}$/;
+    //let regDescription = /(\s*?[\w\.]\s*?){20,}$/;
 
     if (descripcion.value == "") {
       errores.push("El campo descripcion no puede estar vacio");
-      descripcion.classList.add("is-invalid");
-    } else if (!regDescription.test(descripcion.value)) {
-      errores.push("El campo descripcion debe tener minimo 20 caracteres");
       descripcion.classList.add("is-invalid");
     } else {
       descripcion.classList.remove("is-invalid");
