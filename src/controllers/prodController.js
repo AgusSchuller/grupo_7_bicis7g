@@ -49,7 +49,7 @@ module.exports = {
   },
   save: (req, res) => {
     let errors = validationResult(req);
-    req.body.image = req.file.filename;
+    //req.body.image = req.file.filename;
     //return res.send(req.body);
     const _body = {
       //return res.send(_body);
@@ -57,7 +57,7 @@ module.exports = {
       description: req.body.descripcion,
       price: req.body.precio,
       discount: req.body.descuento,
-      image: req.body.filename,
+      image: req.file ? req.file.filename : "",
       modelId: req.body.modelo,
       sizeId: req.body.talla,
     };

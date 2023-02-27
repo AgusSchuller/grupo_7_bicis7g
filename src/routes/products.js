@@ -52,22 +52,6 @@ const validacionesCreate = [
       min: 20,
     })
     .withMessage("La descripcion debe tener al menos veinte caracteres"),
-  body("imagen").custom(async (value, { req }) => {
-    let file = fileLocal;
-    let acceptedExtensions = [".jpg", ".jpeg", ".png", ".gif"];
-    if (!file) {
-      throw new Error("Tienes que subir una imagen");
-    } else {
-      let fileExtension = path.extname(file.originalname);
-      if (!acceptedExtensions.includes(fileExtension)) {
-        throw new Error(
-          "Las extensiones de archivo permitidas son ${acceptedExtensions.join(",
-          ")}"
-        );
-      }
-    }
-    return true;
-  }),
 ];
 
 const validacionesEdit = [
@@ -83,22 +67,6 @@ const validacionesEdit = [
       min: 20,
     })
     .withMessage("La descripcion debe tener al menos veinte caracteres"),
-  body("imagen").custom(async (value, { req }) => {
-    let file = fileLocal;
-    let acceptedExtensions = [".jpg", ".jpeg", ".png", ".gif"];
-    if (!file) {
-      throw new Error("Tienes que subir una imagen");
-    } else {
-      let fileExtension = path.extname(file.originalname);
-      if (!acceptedExtensions.includes(fileExtension)) {
-        throw new Error(
-          "Las extensiones de archivo permitidas son ${acceptedExtensions.join(",
-          ")}"
-        );
-      }
-    }
-    return true;
-  }),
 ];
 
 /*** GET ALL PRODUCTS ***/

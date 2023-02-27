@@ -120,22 +120,6 @@ const validacionesRegistro = [
     .custom((value, { req }) => {
       if (!req.file) throw new Error("Profile Img is required");
       return true;
-    })
-    .custom(async (value, { req }) => {
-      let file = fileLocal;
-      let acceptedExtensions = [".jpg", ".jpeg", ".png", ".gif"];
-      if (!file) {
-        throw new Error("Tienes que subir una imagen");
-      } else {
-        let fileExtension = path.extname(file.originalname);
-        if (!acceptedExtensions.includes(fileExtension)) {
-          throw new Error(
-            "Las extensiones de archivo permitidas son ${acceptedExtensions.join(",
-            ")}"
-          );
-        }
-      }
-      return true;
     }),
 ];
 
