@@ -20,7 +20,9 @@ main section h1 {
 }
 .logo-de-usuario{
  border-radius: 50%;
-  width: 50px
+  width: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  
 } 
 .iconologin {
   margin-right: 5px;
