@@ -8,6 +8,9 @@ const mainController = require("../controllers/mainController");
 
 router.get("/", mainController.index);
 
+/*** SERVICIOS ***/
+router.get("/servicios", mainController.servicios);
+
 /*** CARRITO ***/
 router.get("/productcart", mainController.productCart);
 

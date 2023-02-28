@@ -11,10 +11,14 @@ const mainController = {
       )
       .catch((err) => res.send(err));
   },
+  servicios:(req, res) => {
+    res.render("./products/servicios");
+  },
   //Carrito de compras
   productCart: (req, res) => {
     res.render("./products/productCart");
   },
+   //Listado de productos
   listado:(req, res) => {
     Product.findAll()
     .then((bicis) =>
