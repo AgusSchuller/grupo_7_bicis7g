@@ -18,6 +18,10 @@ main section h1 {
   display: flex;
   justify-content: space-around;
 }
+.logo-de-usuario{
+ border-radius: 50%;
+  width: 50px
+} 
 .iconologin {
   margin-right: 5px;
 }

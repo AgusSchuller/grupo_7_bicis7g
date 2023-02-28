@@ -21,9 +21,10 @@
             ><i class="fa-sharp fa-solid fa-basket-shopping"></i
           ></a>
         </li>
-        <li>
+        <li>    
           <% if(locals.usuario) { %>  
-            <a href="/logout"><%= usuario.name %></i><br>Cerrar sesión <i class="fas fa-sign-out-alt"></i> </i></a>
+            <li><img src="/img/users/<%= usuario.image %>" class="logo-de-usuario" ></li>
+            <a href="/logout">Hola <%= usuario.name %></i><br>Cerrar sesión <i class="fas fa-sign-out-alt"></i> </i></a>
            
           <% } else { %>  
             <i  class="fas fa-sign-in-alt"><a class='iconologin' href="/login"></i>Iniciar Sesion</a>
@@ -31,6 +32,7 @@
               <!-- <a href="/register">Registrarse</i></a> -->
           <%}%>  
         </li>
+        
       </ul>
     </nav>
   </div>
