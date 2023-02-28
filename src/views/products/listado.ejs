@@ -21,6 +21,12 @@
   <header class="main-header">
     <div class="main-header-top-bar">
       <a href="/"><img src="/img/logo7g.jpg" class="logo" /></a>
+      <nav Class="center-navbar">
+        
+        <a href="#">SERVICIOS</a>
+      </nav>
+                
+     
     
       <nav Class="center-navbar">
         <ul class="center-list">
@@ -31,14 +37,14 @@
       </nav>
       <nav Class="right-navbar">
         <ul class="right-list">
-          <li>
+          <!-- <li>
             <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
           </li>
           <li>
             <a href="/productcart"
               ><i class="fa-sharp fa-solid fa-basket-shopping"></i
             ></a>
-          </li>
+          </li> -->
           <li>
             <% if(locals.usuario) { %>  
               <a href="/logout"><%= usuario.name %></i><br>Cerrar sesión <i class="fas fa-sign-out-alt"></i> </i></a>
@@ -54,13 +60,13 @@
     </div>
   </header>
   <!--CONTENIDO PRINCIPAL -->
-     <!--PRODUCTOS DESTACADOS -->
+     
      <main>
         <section class="bienvenida">
          
         </section>
      <section class="busqueda">
-        <h2>Productos destacados</h2>
+        <h2>TODAS NUESTRAS BICICLETAS</h2>
         <article class="vamosabuscar">
           <% bicis.forEach(bici => { %>
           <div class="producto">
