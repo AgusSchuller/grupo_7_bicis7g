@@ -1,45 +1,82 @@
-<%- include("../partials/head", {tituloWeb: "Administar", cssstyle: "/css/styles.css"})%>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LISTADO DE BICIS</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/9440e8cf98.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+</html>
+
 <body>
-<!--HEADER -->
-<%- include("../partials/header") %> 
-<!--CONTENIDO PRINCIPAL -->
-    <main >
-      <!--Administrador de productos-->
-      <br>
-      <section>
-        <article class="tituloAdministrador">
-          <h2>Administrador de Productos</h2>
+  <!--HEADER -->
+  <header class="main-header">
+    <div class="main-header-top-bar">
+      <a href="/"><img src="/img/logo7g.jpg" class="logo" /></a>
+    
+      <nav Class="center-navbar">
+        <ul class="center-list">
+            <% if(locals.usuario.role===9) { %>
+          <li><a href="/products">ADMINISTRAR</a></li> 
+          <%}%>        
+        </ul>
+      </nav>
+      <nav Class="right-navbar">
+        <ul class="right-list">
+          <li>
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+          </li>
+          <li>
+            <a href="/productcart"
+              ><i class="fa-sharp fa-solid fa-basket-shopping"></i
+            ></a>
+          </li>
+          <li>
+            <% if(locals.usuario) { %>  
+              <a href="/logout"><%= usuario.name %></i><br>Cerrar sesión <i class="fas fa-sign-out-alt"></i> </i></a>
+             
+            <% } else { %>  
+              <i  class="fas fa-sign-in-alt"><a class='iconologin' href="/login"></i>Iniciar Sesion</a>
+                <br>
+                <!-- <a href="/register">Registrarse</i></a> -->
+            <%}%>  
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!--CONTENIDO PRINCIPAL -->
+     <!--PRODUCTOS DESTACADOS -->
+     <main>
+        <section class="bienvenida">
+         
+        </section>
+     <section class="busqueda">
+        <h2>Productos destacados</h2>
+        <article class="vamosabuscar">
+          <% bicis.forEach(bici => { %>
+          <div class="producto">
+            <a href="/products/detail/<%= bici.id%>"
+              ><img src="/img/bicis/<%= bici.image%>"
+            /></a>
+            <div class="detalle-producto">
+              <h4 class="precio">$<%= bici.price%></h4>
+              <h4 class="descuentos">%<%= bici.discount%></h4>
+              <h3><%= bici.name%></h3>
+            </div>
+          </div>
+          <% }); %>
         </article>
-        <article >
-          <a class='agregar' href="/products/create"><ion-icon name="add-circle-outline"></ion-icon>Agregar</a>
-        </article>
-        <article class='administrador'>
-        <table >
-            <thead>
-              <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Ver</th>
-                <th scope="col">Editar</th>
-                <th scope="col">Borrar</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% bicis.forEach(bici => { %>      
-              <tr>
-                <td><%= bici.id%> </td>
-                <td><%= bici.name%> </td>     
-      
-                <td><a href="/products/detail/<%= bici.id%> "> <ion-icon name="eye-outline"></ion-icon></a></td>
-                <td><a href="/products/edit/<%= bici.id%> "> <ion-icon name="pencil-outline"></ion-icon></a></td>
-                <td><a href="/products/delete/<%= bici.id%>"><ion-icon name="trash-outline"></ion-icon></a></td>
-              </tr>
-              <% }); %>
-            </tbody>
-          </table> 
-        </article>       
       </section>
-      <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+      <div class="separacion"></div>
     </main>
-  </body>
-  </html>
+    </body>
+    </html>

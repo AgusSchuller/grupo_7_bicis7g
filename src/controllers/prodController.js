@@ -17,7 +17,7 @@ module.exports = {
       .then((bicis) => {
         //return res.send(bicis);
         res.render(
-          path.resolve(__dirname, "..", "views", "products", "listado"),
+          path.resolve(__dirname, "..", "views", "products", "administrar"),
           { bicis }
         );
       })

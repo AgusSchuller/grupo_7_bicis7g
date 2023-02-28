@@ -11,4 +11,7 @@ router.get("/", mainController.index);
 /*** CARRITO ***/
 router.get("/productcart", mainController.productCart);
 
+/*** LISTADO ***/
+router.get("/listado", mainController.listado);
+
 module.exports = router;

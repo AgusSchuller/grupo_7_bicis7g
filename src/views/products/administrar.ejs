@@ -1,0 +1,45 @@
+<%- include("../partials/head", {tituloWeb: "Administar", cssstyle: "/css/styles.css"})%>
+<body>
+<!--HEADER -->
+<%- include("../partials/header") %> 
+<!--CONTENIDO PRINCIPAL -->
+    <main >
+      <!--Administrador de productos-->
+      <br>
+      <section>
+        <article class="tituloAdministrador">
+          <h2>Administrador de Productos</h2>
+        </article>
+        <article >
+          <a class='agregar' href="/products/create"><ion-icon name="add-circle-outline"></ion-icon>Agregar</a>
+        </article>
+        <article class='administrador'>
+        <table >
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Ver</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Borrar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% bicis.forEach(bici => { %>      
+              <tr>
+                <td><%= bici.id%> </td>
+                <td><%= bici.name%> </td>     
+      
+                <td><a href="/products/detail/<%= bici.id%> "> <ion-icon name="eye-outline"></ion-icon></a></td>
+                <td><a href="/products/edit/<%= bici.id%> "> <ion-icon name="pencil-outline"></ion-icon></a></td>
+                <td><a href="/products/delete/<%= bici.id%>"><ion-icon name="trash-outline"></ion-icon></a></td>
+              </tr>
+              <% }); %>
+            </tbody>
+          </table> 
+        </article>       
+      </section>
+      <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    </main>
+  </body>
+  </html>
