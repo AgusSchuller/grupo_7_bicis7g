@@ -21,14 +21,10 @@
   <header class="main-header">
     <div class="main-header-top-bar">
       <a href="/"><img src="/img/logo7g.jpg" class="logo" /></a>
-      <nav Class="center-navbar">
-        
+      <nav Class="center-navbar">        
         <a href="/listado">BICICLETAS</a>
-      </nav>
-                
-     
-    
-      <nav Class="center-navbar">
+      </nav>        
+     <nav Class="center-navbar">
         <ul class="center-list">
             <% if(locals.usuario.role===9) { %>
           <li><a href="/products">ADMINISTRAR</a></li> 
@@ -37,14 +33,7 @@
       </nav>
       <nav Class="right-navbar">
         <ul class="right-list">
-          <!-- <li>
-            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-          </li>
-          <li>
-            <a href="/productcart"
-              ><i class="fa-sharp fa-solid fa-basket-shopping"></i
-            ></a>
-          </li> -->
+         
           <li>
             <% if(locals.usuario) { %>  
               <a href="/logout"><%= usuario.name %></i><br>Cerrar sesión <i class="fas fa-sign-out-alt"></i> </i></a>
@@ -61,8 +50,7 @@
   </header>
   <main>
     <section class="bienvenida">
-        <img src="/img/mantencion.jpg" alt="logo-mantencion" />
-     
+        <img src="/img/mantencion.jpg" alt="logo-mantencion" />     
     </section>
     </main>
     </body>
