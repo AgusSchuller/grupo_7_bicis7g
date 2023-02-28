@@ -18,6 +18,9 @@ main section h1 {
   display: flex;
   justify-content: space-around;
 }
+.iconologin {
+  margin-right: 5px;
+}
 .logo {
   width: 110px;
   border-radius: 15px;

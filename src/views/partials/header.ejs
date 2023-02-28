@@ -1,6 +1,6 @@
 <header class="main-header">
   <div class="main-header-top-bar">
-    <a href="/"><img src="/img/logo7g2.jpg" class="logo" /></a>
+    <a href="/"><img src="/img/logo7g.jpg" class="logo" /></a>
   
     <nav Class="center-navbar">
       <ul class="center-list">
@@ -23,12 +23,12 @@
         </li>
         <li>
           <% if(locals.usuario) { %>  
-              <a href="/logout"><%= usuario.name %><i class="fas fa-sign-out-alt"></i><br>Cerrar sesión</a>
+            <a href="/logout"><%= usuario.name %></i><br>Cerrar sesión <i class="fas fa-sign-out-alt"></i> </i></a>
            
           <% } else { %>  
-              <a href="/login"><i class="fas fa-sign-in-alt"></i>Iniciar Sesion</a>
+            <i  class="fas fa-sign-in-alt"><a class='iconologin' href="/login"></i>Iniciar Sesion</a>
               <br>
-              <a href="/register">Registrarse</i></a>
+              <!-- <a href="/register">Registrarse</i></a> -->
           <%}%>  
         </li>
       </ul>
