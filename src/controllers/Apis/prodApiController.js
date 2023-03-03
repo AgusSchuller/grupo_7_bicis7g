@@ -63,7 +63,9 @@ const prodApiController = {
             Imagen: product.dataValues.image,
             Url: `localhost:3000/products/${product.dataValues.id}`,
           },
-        };
+          
+        }; 
+
         return res.json(respuesta);
       }
       return res.status(200).json("No existe el producto");
